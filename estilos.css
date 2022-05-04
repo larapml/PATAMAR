@@ -1,0 +1,164 @@
+.logotipo {
+    
+width: 100%;
+margin: auto;
+
+    
+}
+
+p {
+    font-family: 'Courier Prime', monospace;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 14px;
+  
+}
+
+.primeiro {
+   padding-bottom: 10px;
+   font-size: 16px;
+
+
+}
+
+.segundo {
+   padding-bottom: 10px;
+   font-size: 16px;
+}
+
+.terceiro {
+   padding-bottom: 30px;
+   font-size: 16px;
+}
+
+
+h2 {
+    font-family: 'Courier Prime', monospace;
+    margin-left: 45%;
+    margin-right: 45%;
+    font-size: 15px;
+    text-align: center;
+   }
+
+.senegal {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 40px;
+    
+   
+}
+
+.colaboradores {
+    font-size: 14px;
+    margin-bottom: 5%;
+}
+
+.titulos {
+    margin: 10%;
+    margin-top: 10px;
+    margin-bottom:0%;
+
+}
+
+.titulos:hover {
+    text-decoration: underline;
+}
+
+.subtitulo {
+     margin-left: 35%;
+    margin-right: 35%;
+    text-align: center;
+    font-size: 13px;
+}
+
+.ptmr {
+   width:6%;
+   position: relative;
+   margin-left: 1%;
+   margin-bottom: 2%;
+
+
+}
+
+.advertisement {
+    position: fixed;
+    top: 0;
+    padding: 50px 30px;
+    z-index: 1;
+    transition: all 4s;
+}
+.hide {
+    opacity:0;
+    left:-55%;
+}
+.show {
+    opacity:1;
+    margin-left: 0;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.button {
+    background: none;
+    font-family: 'Courier Prime', monospace;
+    border-right-style: none;
+    border-bottom-style: none;
+    font-size: 14px;
+    margin-left: 48%
+   
+}
+
+.buttonn {
+     background: none;
+    font-family: 'Courier Prime', monospace;
+    border-right-style: none;
+    border-bottom-style: none;
+    font-size: 14px;
+    margin-right: 4%;
+}
+
+
+.click {
+    cursor: pointer;
+}
+
+#colaboradores {
+    font-size: 300%;
+    margin-left: -26%;
+    margin-right: 15%;
+}
+
+#projetos {
+    font-size: 300%;
+    margin-left: -37%;
+    margin-right: 15%;
+}
+
+#contactos {
+    font-size: 300%;
+    margin-left: -35%;
+    margin-right: 15%;
+}
+
+#sobre {
+    font-size: 300%;
+    margin-left: -44%;
+    margin-right: 15%;
+}
+
+.lista {
+    font-family: 'Courier Prime', monospace;
+    cursor: pointer;
+    list-style-type: none;
+    margin-left: 12.5%;
+    font-size: 20px;
+}
+
+
+.lista:hover {
+    text-decoration: underline;
+}
