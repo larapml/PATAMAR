@@ -9,113 +9,164 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
-    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <link rel="icon" href="imagens/favicon.ico">
     
 <style>
-    .hde{display:none;}
-    .show{display:block;}
+    .hde{
+        display:none;
+    }
+
+    .show{
+        display:block;
+    }
 </style>
 
 </head>
 <body>
-    
-<img class="logotipo" src="imagens/patamaro.jpg" alt="nome"> 
-    
-<div id="advertisement" class="advertisement hide"><img class="ptmr" src="imagens/ptmr.png" alt=""> 
-    
-<p>SOBRE</p>  
-<p>PROJETOS</p>
-<p>COLABORADORES</p>
-<p>CONTACTOS</p>
-    
-    
-</div>
-    
 
-<h2 class="titulos click" id="sobre">SOBRE</h2>
+    <!-- Full Page Image Header with Vertically Centered Content -->
+    <header class="masthead">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+            </div>
+        </div>
+    </header>
     
-<div class="hidden" id="sobre_div">   
-<p class="primeiro"><b>Patamar é uma plataforma descentralizada e internacional com base na Arrezima - território resiliente e pseudo-autóctone brotando no Vale do Tejo desde 2009 - que se manifesta na produção e realização de projetos onde se privilegia a experimentação e processos colaborativos.</b> </p>
-<p class="segundo"><b>Hoje, Patamar funciona como um fluxo de seres (humanos incluídos) que, presencialmente ou à distância, contínua ou esporadicamente, se propõe a partilhar momentos de criação e práticas expandidas. De cariz ôrganico e metamórfico, Patamar priveligia uma relação com a arquitetura e design, mas ao manter uma relação umbilical com o lugar de onde nasceu, alastra também à agricultura, culinária e práticas artísticas.</b></p>
-<p class="terceiro"><b> Patamar é tal e qual o que é: um patamar. Entre-lances e entre-ideias, com vários declives, flutuante, catalizador de movimentos e vontades.</b></p>
-</div>  
- 
+    <div id="advertisement" class="advertisement hide">
+        <img class="ptmr" src="imagens/ptmr.png" alt="">
+        <p id="sobre_menu" class="menu active" onclick="menu_click('sobre')">SOBRE</p>  
+        <p id="projetos_menu" class="menu" onclick="menu_click('projetos')">PROJETOS</p>
+        <p id="colaboradores_menu" class="menu" onclick="menu_click('colaboradores')">COLABORADORES</p>
+        <p id="servicos_menu" class="menu" onclick="menu_click('servicos')">SERVIÇOS</p>
+        <p id="contactos_menu" class="menu" onclick="menu_click('contactos')">CONTACTOS</p>
+    </div>
     
-<h2 class="titulos click" id="projetos">PROJETOS</h2>  
+    <!-- SOBRE -->
+    <div class="full_page main" id="sobre_div">
+        <div class="container h-100">
+            <div class="row h-100">
+              <div class="col-12">
+                <p class="primeiro"><b>Patamar é uma plataforma descentralizada e internacional com base na Arrezima - território resiliente e pseudo-autóctone brotando no Vale do Tejo desde 2009 - que se manifesta na produção e realização de projetos onde se privilegia a experimentação e processos colaborativos.</b> </p>
+                <p class="segundo"><b>Hoje, Patamar funciona como um fluxo de seres (humanos incluídos) que, presencialmente ou à distância, contínua ou esporadicamente, se propõe a partilhar momentos de criação e práticas expandidas. De cariz ôrganico e metamórfico, Patamar priveligia uma relação com a arquitetura e design, mas ao manter uma relação umbilical com o lugar de onde nasceu, alastra também à agricultura, culinária e práticas artísticas.</b></p>
+                <p class="terceiro"><b> Patamar é tal e qual o que é: um patamar. Entre-lances e entre-ideias, com vários declives, flutuante, catalizador de movimentos e vontades.</b></p>        
+              </div>
+            </div>
+        </div>
+    </div>
     
-<div class="hidden" id="projetos_div"> 
+    <!-- PROJETOS -->
+    <div class="full_page hidden main" id="projetos_div">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-12">
+                    <ul>            
+                        <li id="boussana_menu" class="lista projetos" onclick="projects_click('boussana')"> Boussana School</li>
+                        <li id="sol_adormecido_menu" class="lista projetos" onclick="projects_click('sol_adormecido')"> O Sol Adormecido</li>
+                        <li id="grade_viva_menu" class="lista projetos" onclick="projects_click('grade_viva')"> Grade Viva</li>
+                        <li id="escultura_ovos_menu" class="lista projetos" onclick="projects_click('esculturas_ovos')"> Uma Escultura Para Pôr Ovos </li>
+                        <li id="calque_folhas_menu" class="lista projetos" onclick="projects_click('calque_folhas')"> O Calque das Folhas</li>
+                    </ul>
     
-    <ul>
-        
-    <li class="lista"> Boussana School</li>
-    <li class="lista"> O Sol Adormecido</li>
-    <li class="lista"> Grade Viva</li>
-    <li class="lista"> Uma Escultura Para Pôr Ovos </li>
-    <li class="lista"> O Calque das Folhas</li>
+                    <!-- BOUSSANA SCHOOL -->
+                    <div class="hidden project" id="boussana_div">
+                        <img class="senegal" id="ecole_secundaire_boussana_img" src="imagens/senegal.png" alt="">
+                        <button class="button" id="ecole_secundaire_boussana_back"><i class="fa-solid fa-angle-left"></i></button>
+                        <button class="buttonn" id="ecole_secundaire_boussana_forward"><i class="fa-solid fa-angle-right"></i></button>
+                            
+                        <h2 class="titulos" id="ecole_secundaire_boussana"> École Secundaire Boussana</h2>
+
+                        <div id="ecole_secundaire_boussana_div">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, dolor at rhoncus iaculis, nisi erat scelerisque odio, et tristique erat turpis vitae urna. Vestibulum interdum purus tincidunt, suscipit odio in, eleifend leo. Curabitur eget nisi at nibh sollicitudin mattis eget nec dui. Donec facilisis massa at pretium tempus. Nunc ultrices in est lacinia rhoncus. Donec quis dolor sem. Morbi porttitor quam ut tortor auctor vestibulum. Vivamus sed orci ligula. Ut maximus magna quis diam fermentum, ac consectetur mauris commodo. Sed quis metus metus. </p>
+                        </div>
+
+                        <p class="subtitulo"> Proposta para Escola Secundária em Kafountine, Senegal. 2022</p>
+                    </div>
+
+                    <!-- SOL ADORMECIDO -->
+                    <div id="sol_adormecido_div" class="hidden project">
+                        <img class="senegal" id="sol_adormecido_img" src="imagens/soladormecido.jpg" alt="">
+                        <button class="button" id="sol_adormecido_back">o</button>
+                        <button class="buttonn" id="sol_adormecido_forward">></button>    
+                            
+                        <h2 class="titulos" id="sol_adormecido"> Sol Adormecido</h2>
+                            
+                        <div id="sol_adormecido_div">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, dolor at rhoncus iaculis, nisi erat scelerisque odio, et tristique erat turpis vitae urna. Vestibulum interdum purus tincidunt, suscipit odio in, eleifend leo. Curabitur eget nisi at nibh sollicitudin mattis eget nec dui. Donec facilisis massa at pretium tempus. Nunc ultrices in est lacinia rhoncus. Donec quis dolor sem. Morbi porttitor quam ut tortor auctor vestibulum. Vivamus sed orci ligula. Ut maximus magna quis diam fermentum, ac consectetur mauris commodo. Sed quis metus metus. </p>
+                        </div>
+
+                        <p class="subtitulo"> Proposta de Instalação Temporária para Concéntrico. 2022</p>
+                    </div>
+
+                    <!-- CALQUE DAS FOLHAS -->
+                    <div id="calque_folhas_div" class="hidden project">
+                        <img class="senegal" id="calque_folhas_img" src="imagens/calquedasfolhas.jpg" alt="">
+                        <button class="button" id="calque_folhas_back">o</button>
+                        <button class="buttonn" id="calque_folhas_forward">></button>    
+                            
+                        <h2 class="titulos" id="calque_folhas"> O Calque das Folhas</h2>
+                            
+                        <div id="calque_folhas_div">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, dolor at rhoncus iaculis, nisi erat scelerisque odio, et tristique erat turpis vitae urna. Vestibulum interdum purus tincidunt, suscipit odio in, eleifend leo. Curabitur eget nisi at nibh sollicitudin mattis eget nec dui. Donec facilisis massa at pretium tempus. Nunc ultrices in est lacinia rhoncus. Donec quis dolor sem. Morbi porttitor quam ut tortor auctor vestibulum. Vivamus sed orci ligula. Ut maximus magna quis diam fermentum, ac consectetur mauris commodo. Sed quis metus metus. </p>
+                        </div>
+
+                        <p class="subtitulo"> Produção de Sacos. 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>            
+    </div>
     
-    </ul>
-</div>
-    
+    <!-- COLABORADORES -->
+    <div class="full_page hidden main" id="colaboradores_div">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-12">
+                    <p> Daniela Doe (Designer Multidisciplinar), JOÃO SIMPLES (Jardineiro), JONATHAN BOETTGER (Arquiteto), HUGO LOPES (Arquiteto), LARA LOPES (Designer),  MARGARIDA PEREIRA (Educadora e Costureira), MIGUEL TEODORO (Artista), VALDEMAR LOPES (Educador e Investigad0r), </p>
+                </div>
+            </div>
+        </div>            
+    </div>
 
+    <!-- SERVICOS -->
+    <div class="full_page hidden main" id="servicos_div">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-12">
+                    <h1>Serviços</h1>
+                </div>
+            </div>
+        </div>            
+    </div>
 
-<img class="senegal" id="ecole_secundaire_boussana_img" src="imagens/senegal.png" alt="">
-<button class="button" id="ecole_secundaire_boussana_back">o</button>
-<button class="buttonn" id="ecole_secundaire_boussana_forward">></button>
-    
-<h2 class="titulos click" id="ecole_secundaire_boussana"> École Secundaire Boussana</h2>
-
-<div class="hidden" id="ecole_secundaire_boussana_div">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, dolor at rhoncus iaculis, nisi erat scelerisque odio, et tristique erat turpis vitae urna. Vestibulum interdum purus tincidunt, suscipit odio in, eleifend leo. Curabitur eget nisi at nibh sollicitudin mattis eget nec dui. Donec facilisis massa at pretium tempus. Nunc ultrices in est lacinia rhoncus. Donec quis dolor sem. Morbi porttitor quam ut tortor auctor vestibulum. Vivamus sed orci ligula. Ut maximus magna quis diam fermentum, ac consectetur mauris commodo. Sed quis metus metus. </p>
-</div>
-
-<p class="subtitulo"> Proposta para Escola Secundária em Kafountine, Senegal. 2022</p>
-    
-<!-- SOL ADORMECIDO -->    
-
-
-<img class="senegal" id="sol_adormecido_img" src="imagens/soladormecido.jpg" alt="">
-<button class="button" id="sol_adormecido_back">o</button>
-<button class="buttonn" id="sol_adormecido_forward">></button>    
-    
-<h2 class="titulos click" id="sol_adormecido"> Sol Adormecido</h2>
-    
-<div class="hidden" id="sol_adormecido_div">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, dolor at rhoncus iaculis, nisi erat scelerisque odio, et tristique erat turpis vitae urna. Vestibulum interdum purus tincidunt, suscipit odio in, eleifend leo. Curabitur eget nisi at nibh sollicitudin mattis eget nec dui. Donec facilisis massa at pretium tempus. Nunc ultrices in est lacinia rhoncus. Donec quis dolor sem. Morbi porttitor quam ut tortor auctor vestibulum. Vivamus sed orci ligula. Ut maximus magna quis diam fermentum, ac consectetur mauris commodo. Sed quis metus metus. </p>
-</div>
-
-<p class="subtitulo"> Proposta de Instalação Temporária para Concéntrico. 2022</p>
-
-<!-- CALQUE DAS FOLHAS --> 
-
-
-
-<img class="senegal" id="calque_folhas_img" src="imagens/calquedasfolhas.jpg" alt="">
-<button class="button" id="calque_folhas_back">o</button>
-<button class="buttonn" id="calque_folhas_forward">></button>    
-    
-<h2 class="titulos click" id="calque_folhas"> O Calque das Folhas</h2>
-    
-<div class="hidden" id="calque_folhas_div">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, dolor at rhoncus iaculis, nisi erat scelerisque odio, et tristique erat turpis vitae urna. Vestibulum interdum purus tincidunt, suscipit odio in, eleifend leo. Curabitur eget nisi at nibh sollicitudin mattis eget nec dui. Donec facilisis massa at pretium tempus. Nunc ultrices in est lacinia rhoncus. Donec quis dolor sem. Morbi porttitor quam ut tortor auctor vestibulum. Vivamus sed orci ligula. Ut maximus magna quis diam fermentum, ac consectetur mauris commodo. Sed quis metus metus. </p>
-</div>
-
-<p class="subtitulo"> Produção de Sacos. 2021</p>
-
+    <!-- CONTACTOS -->
+    <div class="full_page hidden main" id="contactos_div">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-12">
+                    <h1>Contactos</h1>
+                </div>
+            </div>
+        </div>            
+    </div>
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script>
     var senegal = ["imagens/senegal3.jpg", "imagens/senegal.png", "imagens/senegal1.jpg"];
     var sacos = ["imagens/calquedasfolhas.jpg", "imagens/calquedasfolhas2.jpg" ];
     var teodoro = ["imagens/soladormecido.jpg", "imagens/soladormecido1.jpg", "imagens/soladormecido2.jpg"];
-
+    
     $(document).scroll(function() {
 
         myID = document.getElementById("advertisement");
 
         var myScrollFunc = function () {
             var y = window.scrollY;
-            if (y >= 5) {
+            if (y >= 500) {
                 myID.className = "advertisement show"
             } else {
                 myID.className = "advertisement hide"
@@ -125,15 +176,37 @@
         window.addEventListener("scroll", myScrollFunc);
     });
 
-    $(".titulos").click(function (e) {
-        let element = $("#"+e.target.id+"_div");
-        if (element.hasClass("hidden")) {
-            $("#"+e.target.id+"_div").removeClass("hidden");
-        }
-        else {
-            $("#"+e.target.id+"_div").addClass("hidden");
-        }
-    });
+    function menu_click(section) {
+        $(".menu").each(function() {
+            $(this).removeClass('active');
+        });
+
+        $("#"+section+"_menu").addClass('active');
+
+        $(".main").each(function() {
+            if (!$(this).hasClass('hidden')) {
+                $(this).addClass('hidden');
+            }
+        });
+
+        $("#"+section+"_div").removeClass('hidden');
+    }
+
+    function projects_click(project) {
+        $(".projetos").each(function() {
+            $(this).removeClass('active');
+        });
+
+        $("#"+project+"_menu").addClass('active');
+
+        $(".project").each(function() {
+            if (!$(this).hasClass('hidden')) {
+                $(this).addClass('hidden');
+            }
+        });
+
+        $("#"+project+"_div").removeClass('hidden');
+    }
 
     $("#ecole_secundaire_boussana_forward").click(function() {
         let img = $("#ecole_secundaire_boussana_img");
@@ -257,20 +330,6 @@
 
     
 </script>
-
-
-
-
-<h2 class="titulos click" id="colaboradores">COLABORADORES</h2>
-
-<div class="hidden" id="colaboradores_div">   
-<p> Daniela Doe (Designer Multidisciplinar), JOÃO SIMPLES (Jardineiro), JONATHAN BOETTGER (Arquiteto), HUGO LOPES (Arquiteto), LARA LOPES (Designer),  MARGARIDA PEREIRA (Educadora e Costureira), MIGUEL TEODORO (Artista), VALDEMAR LOPES (Educador e Investigad0r), </p>
-</div>  
-    
-    
-<h2 class="titulos click" id="contactos">CONTACTOS</h2>
-
-
 </body>
 </html>
 
