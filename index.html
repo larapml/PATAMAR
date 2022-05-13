@@ -126,7 +126,7 @@
                                 <li id="grade_viva_menu" class="lista projetos" onclick="projects_click('grade_viva')"> 
                                     Grade Viva
                                 </li>
-                                <li id="escultura_ovos_menu" class="lista projetos" onclick="projects_click('esculturas_ovos')"> 
+                                <li id="ovos_menu" class="lista projetos" onclick="projects_click('ovos')"> 
                                     Uma Escultura Para Pôr Ovos 
                                 </li>
                                 <li id="calque_folhas_menu" class="lista projetos" onclick="projects_click('calque_folhas')"> 
@@ -165,6 +165,22 @@
                                 <p class="subtitulo"> Proposta de Instalação Temporária para Concéntrico. 2022</p>
                             </div>
                             <!-- /SOL ADORMECIDO -->
+
+                            <!-- OVOS -->
+                            <div id="ovos_div" class="hidden project">
+                                <img class="senegal" id="ovos_img" src="imagens/ovos2.jpg" alt="">
+                                <button class="button" id="ovos_back"><i class="fa-solid fa-angle-left"></i></button>
+                                <button class="buttonn" id="ovos_forward"><i class="fa-solid fa-angle-right"></i></button>    
+                                    
+                                <h2 class="titulos" id="ovos"> Uma Escultura Para Pôr Ovos</h2>
+                                    
+                                <div id="ovos_div">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, dolor at rhoncus iaculis, nisi erat scelerisque odio, et tristique erat turpis vitae urna. Vestibulum interdum purus tincidunt, suscipit odio in, eleifend leo. Curabitur eget nisi at nibh sollicitudin mattis eget nec dui. Donec facilisis massa at pretium tempus. Nunc ultrices in est lacinia rhoncus. Donec quis dolor sem. Morbi porttitor quam ut tortor auctor vestibulum. Vivamus sed orci ligula. Ut maximus magna quis diam fermentum, ac consectetur mauris commodo. Sed quis metus metus. </p>
+                                </div>
+
+                                <p class="subtitulo"> Lorem ipsum dolor sit amet. 2021</p>
+                            </div>
+                            <!-- /OVOS -->
 
                             <!-- CALQUE DAS FOLHAS -->
                             <div id="calque_folhas_div" class="hidden project">
@@ -279,8 +295,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script>
     var senegal = ["imagens/senegal3.jpg", "imagens/senegal.png", "imagens/senegal1.jpg"];
-    var sacos = ["imagens/calquedasfolhas.jpg", "imagens/calquedasfolhas2.jpg" ];
+    var calque_folhas = ["imagens/calque.jpg", "imagens/calquedasfolhas.jpg", "imagens/calquedasfolhas2.jpg" ];
     var teodoro = ["imagens/soladormecido.jpg", "imagens/soladormecido1.jpg", "imagens/soladormecido2.jpg"];
+    var ovos = ["imagens/ovos2.jpg", "imagens/ovos.jpg"];
     
     /*
     $(document).scroll(function() {
@@ -416,6 +433,44 @@
         }
     });
 
+    $("#ovos_forward").click(function() {
+        let img = $("#ovos_img");
+
+        let actual_img = img.attr("src");
+
+        let next_index = ovos.indexOf(actual_img);
+
+        if (next_index !== -1) {
+            next_index += 1;
+
+            if (next_index >= ovos.length) {
+                next_index = 0;
+            }
+            
+            img.attr("src", ovos[next_index]);
+            document.getElementById("ovos_img").scrollIntoView();
+        }
+    });
+
+    $("#ovos_back").click(function() {
+        let img = $("#ovos_img");
+
+        let actual_img = img.attr("src");
+
+        let next_index = ovos.indexOf(actual_img);
+
+        if (next_index !== -1) {
+            next_index -= 1;
+            
+            if (next_index < 0) {
+                next_index = ovos.length - 1;
+            }
+
+            img.attr("src", ovos[next_index]);
+            document.getElementById("ovos_img").scrollIntoView();
+        }
+    });
+
     $("#calque_folhas_forward").click(function() {
         let img = $("#calque_folhas_img");
 
@@ -430,7 +485,7 @@
                 next_index = 0;
             }
             
-            img.attr("src", sacos[next_index]);
+            img.attr("src", calque_folhas[next_index]);
             document.getElementById("calque_folhas_img").scrollIntoView();
         }
     });

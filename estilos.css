@@ -192,4 +192,6 @@ h2 {
 footer {
     padding-top: 3%;
     padding-bottom: 3%;
+    max-width: 95%;
+    margin: auto;
 }
