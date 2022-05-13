@@ -8,11 +8,12 @@
     min-height: 500px;
 }
 
-p {
+p, a {
     font-family: 'Courier Prime', monospace;
     margin-left: 15%;
     margin-right: 15%;
     font-size: 16px;
+    color: black !important;
 }
 
 .menu {
@@ -186,4 +187,9 @@ h2 {
 
 .text-bold {
     font-weight: bold;
+}
+
+footer {
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
