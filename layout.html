@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>PATAMAR</title>
+<link href="layout.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="icon" href="imagens/favicon.ico">
+
+</head>
+<body>
+
+    <!-- Full Page Image Header with Vertically Centered Content -->
+    <header class="masthead">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <img src="imagens/patamaro.jpg" alt="Logo do Patamar" class="logotipo"
+                 onclick="slide_to('content');" onmouseover="logo_hover(this);" onmouseout="logo_unhover(this);">
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row" id="content">
+
+            <div class="col-12 col-sm-2">
+                <nav id="sidebar align-items-center">
+
+                    <ul class="list-unstyled components">   
+                        <li id="sobre_menu" class="menu active">
+                            <p>SOBRE</p>
+                        </li>
+                        <li id="projetos_menu" class="menu" onclick="menu_click('projetos')">
+                            <p>PROJETOS</p>
+                        </li>
+                        <li id="colaboradores_menu" class="menu">
+                            <p>COLABORADORES</p>
+                        </li>
+                        <li id="servicos_menu" class="menu">
+                            <p>SERVIÇOS</p>
+                        </li>
+                        <li id="contactos_menu" class="menu">
+                            <p>CONTACTOS</p>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+
+            <div class="col-12 col-sm-10">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
+                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
+                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
+                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
+                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
+                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
+                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
+                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
+                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
+                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
+                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
+                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
+                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
+                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
+                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
+                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
+                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
+                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
+                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
+                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
+                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
+                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
+                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
+                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
+                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
+                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
+                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
+                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
+                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
+                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
+                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
+                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
+                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
+                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
+                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
+                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
+                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
+                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
+                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
+                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
+                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
+                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
+                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
+                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
+                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
+                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
+                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
+                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
+                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
+                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
+                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
+                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
+                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
+                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
+                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
+                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
+                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
+                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
+                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
+                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
+                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
+                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
+                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
+                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
+                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
+                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
+                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
+                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
+                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
+                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
+                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
+                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
+                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
+                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
+                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
+                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
+                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
+                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
+                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
+                </p>
+
+                <div class="hidden" id="test">
+                    <h1>Projetos</h1>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
+                        Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
+                        in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
+                        Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
+                        nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
+                        orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
+                        Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
+                        Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
+                        in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
+                        Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
+                        nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
+                        orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
+                        Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
+                        Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
+                        in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
+                        Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
+                        nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
+                        orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
+                        Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <footer class="footer">
+        <div class="container-fluid text-center">
+            <div class="row">
+                <div class="col-4">
+                    <p>2022</p>
+                </div>
+                <div class="col-4">
+                    <img class="ptmr" src="imagens/ptmr.png" alt="">
+                </div>
+                <div class="col-4">
+                    <a class="click underlined" href='https://www.instagram.com/umpatamar/' target="_blank">IG</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="./layout.js"></script>

@@ -1,0 +1,61 @@
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+}
+
+.logotipo {
+    width: 100%;
+    height: auto;
+}
+
+p, a {
+    font-family: 'Courier Prime', monospace;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 16px;
+    color: black !important;
+}
+
+#content {
+    padding-top: 2%;
+}
+
+.sidebar-header {
+    margin-bottom: 10%;
+}
+
+#sidebar {
+    padding-left: 10%;
+}
+
+.menu {
+    font-family: 'Courier Prime', monospace;
+    margin-left: 3%;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+li.menu p:hover {
+    color: #86c685 !important;
+}
+
+.menu.active {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}
+
+.show{
+    display:block;
+}
+
+.ptmr {
+    width:20vw;
+    max-width: 100px;
+    position: relative;
+    margin-left: 1%;
+    margin-bottom: 3%;
+ }

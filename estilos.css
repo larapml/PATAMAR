@@ -3,11 +3,6 @@
     height: auto;
 }
 
-.masthead {
-    height: 100vh;
-    min-height: 500px;
-}
-
 p, a {
     font-family: 'Courier Prime', monospace;
     margin-left: 15%;
@@ -157,20 +152,14 @@ h2 {
     height: 95vh;
 }
 
-.wrapper {
-    display: flex;
-    width: 100%;
-    align-items: stretch;
-    margin-top: 5%;
-    margin-bottom: 10%;
-}
+
 
 .sidebar-header {
     margin-bottom: 10%;
 }
 
 #sidebar {
-    margin-left: 3%;
+    padding-left: 10%;
 }
 
 #content {
@@ -187,11 +176,4 @@ h2 {
 
 .text-bold {
     font-weight: bold;
-}
-
-footer {
-    padding-top: 3%;
-    padding-bottom: 3%;
-    max-width: 95%;
-    margin: auto;
 }
