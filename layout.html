@@ -34,20 +34,34 @@
                 <nav id="sidebar align-items-center">
 
                     <ul class="list-unstyled components">   
-                        <li id="sobre_menu" class="menu active">
+                        <li id="sobre_menu" class="menu active" onclick="menu_click('sobre')">
                             <p>SOBRE</p>
+                            <div class="hidden submenu" id="sobre_submenu"></div>
                         </li>
                         <li id="projetos_menu" class="menu" onclick="menu_click('projetos')">
                             <p>PROJETOS</p>
+                            <div class="hidden submenu" id="projetos_submenu">
+                                <p class="no_space"><small>Todos</small></p>
+                                <p class="no_space"><small>Em Construção</small></p>
+                                <p class="no_space"><small>Arquitetura</small></p>
+                                <p class="no_space"><small>Instalação</small></p>
+                                <p class="no_space"><small>Urbanismo</small></p>
+                                <p class="no_space"><small>Design</small></p>
+                                <p class="no_space"><small>Oficina</small></p>
+                                <p><small>Concurso</small></p>
+                            </div>
                         </li>
-                        <li id="colaboradores_menu" class="menu">
-                            <p>COLABORADORES</p>
-                        </li>
-                        <li id="servicos_menu" class="menu">
+                        <li id="servicos_menu" class="menu" onclick="menu_click('servicos')">
                             <p>SERVIÇOS</p>
+                            <div class="hidden submenu" id="servicos_submenu"></div>
                         </li>
-                        <li id="contactos_menu" class="menu">
+                        <li id="colaboradores_menu" class="menu" onclick="menu_click('colaboradores')">
+                            <p>COLABORADORES</p>
+                            <div class="hidden submenu" id="colaboradores_submenu"></div>
+                        </li>
+                        <li id="contactos_menu" class="menu" onclick="menu_click('contactos')">
                             <p>CONTACTOS</p>
+                            <div class="hidden submenu" id="contactos_submenu"></div>
                         </li>
                     </ul>
 
@@ -55,155 +69,299 @@
             </div>
 
             <div class="col-12 col-sm-10">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
-                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
-                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
-                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
-                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
-                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
-                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
-                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
-                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
-                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
-                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
-                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
-                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
-                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
-                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
-                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
-                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
-                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
-                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
-                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
-                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
-                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
-                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
-                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
-                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
-                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
-                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
-                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
-                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
-                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
-                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
-                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
-                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
-                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
-                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
-                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
-                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
-                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
-                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
-                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
-                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
-                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
-                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
-                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
-                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
-                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
-                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
-                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
-                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
-                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
-                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
-                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
-                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
-                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
-                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
-                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
-                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
-                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
-                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
-                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
-                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
-                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
-                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
-                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
-                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
-                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
-                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
-                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
-                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
-                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
-                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
-                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
-                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
-                    Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
-                    in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
-                    Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
-                    nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
-                    orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
-                    Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
-                </p>
+                
+                <!-- SOBRE -->
+                <div class="full_page main" id="sobre_div">
+                    <div style="margin-bottom: 20px;">
+                        <p style="padding-bottom: 10px; font-size: 18px;">
+                            <b><span class="italic">Patamar</span> é uma plataforma descentralizada e internacional com base na Arrezima
+                            - território resiliente e pseudo-autóctone brotando no Vale do Tejo desde 2009 - que se manifesta 
+                            na produção e realização de projetos onde se privilegia a experimentação e processos colaborativos.</b>
+                        </p>
+                        <p style="padding-bottom: 10px; font-size: 18px;">
+                            <b>Hoje, <span class="italic">Patamar</span> funciona como um fluxo de seres (humanos incluídos) que, presencialmente ou à 
+                            distância, contínua ou esporadicamente, se propõe a partilhar momentos de criação e práticas 
+                            expandidas. De cariz ôrganico e metamórfico, <span class="italic">Patamar</span> priveligia uma relação com a arquitetura 
+                            e design, mas ao manter uma relação umbilical com o lugar de onde nasceu, alastra também à 
+                            agricultura, culinária e práticas artísticas.</b>
+                        </p>
+                        <p style="padding-bottom: 10px; font-size: 18px;">
+                            <b><span class="italic">Patamar</span> é tal e qual o que é: um patamar. Entre-lances e entre-ideias, com vários declives, 
+                            flutuante, catalizador de movimentos e vontades.</b>
+                        </p>
+                    </div>
 
-                <div class="hidden" id="test">
-                    <h1>Projetos</h1>
+                    <div>
+                        <p class="underlined" style="font-size: 20px;"><b>Arrezima</b></p>
 
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
-                        Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
-                        in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
-                        Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
-                        nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
-                        orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
-                        Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
-                        Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
-                        in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
-                        Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
-                        nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
-                        orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
-                        Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
-                        Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
-                        in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
-                        Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
-                        nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
-                        orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
-                        Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
-                    </p>
+                        <p><b>Espaço de criação</b></p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
+                            Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
+                            in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
+                            Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
+                            nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
+                            orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
+                            Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
+                        </p>
+
+                        <p><b>Energia da diversidade e singularidade</b></p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere pellentesque porta. 
+                            Phasellus sit amet enim id ipsum dignissim molestie. Nulla risus turpis, aliquam at felis 
+                            in, ullamcorper molestie nulla. Maecenas ut enim urna. Fusce sit amet efficitur neque. 
+                            Morbi convallis sem id pharetra lacinia. Vestibulum eu fermentum turpis. Nam vitae aliquam 
+                            nibh. Praesent ultrices justo ac sodales fringilla. Vestibulum ante ipsum primis in faucibus
+                            orci luctus et ultrices posuere cubilia curae; Vivamus in ex non purus luctus faucibus. 
+                            Phasellus dui elit, pharetra vitae lectus pharetra, facilisis rutrum dui. 
+                        </p>
+
+                    </div>
                 </div>
+                <!-- /SOBRE -->
+
+                <!-- PROJETOS -->
+                <div class="full_page hidden main" id="projetos_div">
+
+                    <!-- GRADE VIVA -->
+                    <section>
+                        <p id="grade_viva_menu" class="lista no_space projetos" onclick="projects_click('grade_viva')"> 
+                            Grade Viva <small>Em Construção, Urbanismo</small>
+                        </p>
+                        <div class="hidden projeto_sobre" id="grade_viva_div">
+                            <h1>Grade Viva</h1>
+                        </div>
+                    </section>
+                    <!-- /GRADE VIVA -->
+
+                    <!-- BOUSSANA SCHOOL -->
+                    <section>
+                        <p id="boussana_menu" class="lista no_space projetos" onclick="projects_click('boussana')"> 
+                            Boussana School <small>Concurso, Arquitetura</small>
+                        </p>
+                        <div class="hidden projeto_sobre" id="boussana_div">
+                            <img class="projeto_img" id="ecole_secundaire_boussana_img" src="imagens/senegal.png" alt="">
+                            <div style="margin: auto; text-align: center;">
+                                <button class="projeto_btn" id="ecole_secundaire_boussana_back"><i class="fa-solid fa-angle-left"></i></button>
+                                <button class="projeto_btn" id="ecole_secundaire_boussana_forward"><i class="fa-solid fa-angle-right"></i></button>
+                            </div>
+
+                            <h2 class="titulos" id="ecole_secundaire_boussana"> École Secundaire Boussana</h2>
+
+                            <div id="ecole_secundaire_boussana_div">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, dolor at rhoncus iaculis, nisi erat scelerisque odio, et tristique erat turpis vitae urna. Vestibulum interdum purus tincidunt, suscipit odio in, eleifend leo. Curabitur eget nisi at nibh sollicitudin mattis eget nec dui. Donec facilisis massa at pretium tempus. Nunc ultrices in est lacinia rhoncus. Donec quis dolor sem. Morbi porttitor quam ut tortor auctor vestibulum. Vivamus sed orci ligula. Ut maximus magna quis diam fermentum, ac consectetur mauris commodo. Sed quis metus metus. </p>
+                            </div>
+
+                            <p class="subtitulo"> Proposta para Escola Secundária em Kafountine</p>
+                            <p class="no_space"><small>Localização: Senegal</small></p>
+                            <p class="no_space"><small>Ano: 2022</small></p>
+                            <p>&nbsp;</p>
+                        </div>
+                    </section>
+                    <!-- /BOUSSANA SCHOOL -->
+
+                    <!-- O SOL ADORMECIDO -->
+                    <section>
+                        <p id="sol_adormecido_menu" class="lista no_space projetos" onclick="projects_click('sol_adormecido')"> 
+                            O Sol Adormecido <small>Concurso, Instalação</small>
+                        </p>
+                        <div class="hidden projeto_sobre" id="sol_adormecido_div">
+                            <h1>O Sol Adormecido</h1>
+                        </div>
+                    </section>
+                    <!-- /O SOL ADORMECIDO -->
+
+                    <!-- A RESPIGA DAS PEDRAS -->
+                    <section>
+                        <p id="respiga_menu" class="lista no_space projetos" onclick="projects_click('respiga')">
+                            A Respiga das Pedras <small>Urbanismo</small>
+                        </p>
+                        <div class="hidden projeto_sobre" id="respiga_div">
+                            <h1>A Respiga das Pedras</h1>
+                        </div>
+                    </section>
+                    <!-- /A RESPIGA DAS PEDRAS -->
+
+                    <!-- CHALEIRA DE COMPOSTAGEM -->
+                    <section>
+                        <p id="chaleira_compostagem_menu" class="lista no_space projetos" onclick="projects_click('chaleira_compostagem')">
+                            Chaleira de Compostagem <small>Design</small>
+                        </p>
+                        <div class="hidden projeto_sobre" id="chaleira_compostagem_div">
+                            <h1>Chaleira de Compostagem</h1>
+                        </div>
+                    </section>
+                    <!-- /CHALEIRA DE COMPOSTAGEM -->
+
+                    <!-- CASA PARA UM BURRO E DUAS CABRAS -->
+                    <section>
+                        <p id="casa_burro_cabras_menu" class="lista no_space projetos" onclick="projects_click('casa_burro_cabras')">
+                            Casa para um Burro e duas Cabras <small>Arquitetura</small>
+                        </p>
+                        <div class="hidden projeto_sobre" id="casa_burro_cabras_div">
+                            <h1>Casa para um Burro e duas Cabras</h1>
+                        </div>
+                    </section>
+                    <!-- /CASA PARA UM BURRO E DUAS CABRAS -->
+
+                    <!-- O CALQUE DAS FOLHAS -->
+                    <section>
+                        <p id="calque_folhas_menu" class="lista no_space projetos" onclick="projects_click('calque_folhas')"> 
+                            O Calque das Folhas <small>Oficina</small>
+                        </p>
+                        <div class="hidden projeto_sobre" id="calque_folhas_div">
+                            <h1>O Calque das Folhas</h1>
+                        </div>
+                    </section>
+                    <!-- /O CALQUE DAS FOLHAS -->
+
+                    <!-- SUPORTE-PORTÁTIL -->
+                    <section>
+                        <p id="suporte_portatil_menu" class="lista no_space projetos" onclick="projects_click('suporte_portatil')">                     
+                            Suporte-Portátil <small>Design</small>
+                        </p>
+                        <div class="hidden projeto_sobre" id="suporte_portatil_div">
+                            <h1>Suporte-Portátil</h1>
+                        </div>
+                    </section>
+                    <!-- /SUPORTE-PORTÁTIL -->
+
+                    <!-- UMA ESCULTURA PARA PÔR OVOS -->
+                    <section>
+                        <p id="ovos_menu" class="lista no_space projetos" onclick="projects_click('ovos')"> 
+                            Uma Escultura Para Pôr Ovos <small>Arquitetura</small>
+                        </p>
+                        <div class="hidden projeto_sobre" id="ovos_div">
+                            <h1>Uma Escultura Para Pôr Ovos</h1>
+                        </div>
+                    </section>
+                    <!-- /UMA ESCULTURA PARA PÔR OVOS -->
+
+                    <!-- UMA PLATAFORMA ENTRE DOIS EUCALIPTOS -->
+                    <section>
+                        <p id="plataforma_menu" class="lista no_space projetos" onclick="projects_click('plataforma')"> 
+                            Uma Plataforma entre Dois Eucaliptos <small>Oficina</small>
+                        </p>
+                        <div class="hidden projeto_sobre" id="plataforma_div">
+                            <h1>Uma Plataforma entre Dois Eucaliptos</h1>
+                        </div>
+                    </section>
+                    <!-- /UMA PLATAFORMA ENTRE DOIS EUCALIPTOS -->
+
+                    <!-- FERRO NOVO -->
+                    <section>
+                        <p id="ferro_novo_menu" class="lista no_space projetos" onclick="projects_click('ferro_novo')"> 
+                            Ferro Novo <small>Oficina</small>
+                        </p>
+                        <div class="hidden projeto_sobre" id="ferro_novo_div">
+                            <h1>Ferro Novo</h1>
+                        </div>
+                    </section>
+                    <!-- /FERRO NOVO -->
+
+                    <!-- AH LIXO, LIXO -->
+                    <section>
+                        <p id="lixo_lixo_menu" class="lista no_space projetos" onclick="projects_click('lixo_lixo')"> 
+                            Ah lixo, lixo <small>Design</small>
+                        </p>
+                        <div class="hidden projeto_sobre" id="lixo_lixo_div">
+                            <h1>Ah lixo, lixo</h1>
+                        </div>
+                    </section>
+                    <!-- /AH LIXO, LIXO -->
+
+                </div>
+                <!-- PROJETOS -->
+
+                <!-- SERVIÇOS -->
+                <div class="full_page main hidden" id="servicos_div">
+                    <p class="underlined" style="font-size: 20px;"><b>+ Projeto</b></p>
+                    <p>Estamos disponíveis para trabalhar e colaborar em projetos na área de arquitetura, urbanismo, design participativo, instalações, objetos de cenografia, design de produto etc</p>
+                    
+                    <p class="underlined" style="font-size: 20px;"><b>+ Laboratório Arrezima</b></p>
+                    <p>A Arrezima é um lugar em construção e por isso requer da presença de pessoas para que a sua existência no tempo seja materializada. Entre giestais e eucaliptais, “e vida e encostas que se transformavam em matas de carvalhos e sobreiros”, este é um lugar pseudo-autóctone. ‘Autóctone’ porque por fatores naturais foi plantado na encosta por pessoas oriundas de outros lugares (e por isso existe de e com outros lugares); ‘pseudo’ porque continua a questionar a sua condição de lugar.</p>
+                    <p>A Arrezima oferece condições de vida silenciosa e resiliente para residências individuais ou coletivas e espaço de trabalho para desenvolvimento de projetos práticos e/ou de pesquisa.</p>
+                    <p>Espaços disponíveis:</p>
+                    <p style="padding-bottom: 0px; margin-bottom: 0px;">&emsp; - Oficina e espaço para ideias materializar</p>
+                    <p style="padding-bottom: 0px; margin-bottom: 0px;">&emsp; - Horta para plantar</p>
+                    <p style="padding-bottom: 0px; margin-bottom: 0px;">&emsp; - Biblioteca para ler e investigar</p>
+                    <p style="padding-bottom: 0px; margin-bottom: 0px;">&emsp; - Cozinha para cozinhar</p>
+                    <p style="padding-bottom: 0px; margin-bottom: 0px;">&emsp; - Camas para descansar</p>
+                </div>
+                <!-- /SERVIÇOS -->
+
+                <!-- COLABORADORES -->
+                <div class="full_page main hidden" id="colaboradores_div">
+                    <p style="font-size: 20px;"><b>Patamar é um fluxo de pessoas em constante transformação.</b></p>
+                    <p>&nbsp;</p>
+
+                    <p class="colaboradores" id="daniela_doe" onclick="show_about('daniela_doe')">Daniela Doe</p>
+                    <p class="hidden about" id="daniela_doe_about">
+                        Designer Multidisciplinar com interesse por trabalhos manuais
+                    </p>
+                    
+                    <p class="colaboradores" id="hugo_lopes" onclick="show_about('hugo_lopes')">Hugo Lopes</p>
+                    <p class="hidden about" id="hugo_lopes_about">
+                        Designer Multidisciplinar com interesse por trabalhos manuais
+                    </p>
+                    
+                    <p class="colaboradores" id="margarida_pereira" onclick="show_about('margarida_pereira')">Margarida Pereira</p>
+                    <p class="hidden about" id="margarida_pereira_about">
+                        Designer Multidisciplinar com interesse por trabalhos manuais
+
+                    </p>
+                    
+                    <p class="colaboradores" id="maria_abrantes" onclick="show_about('maria_abrantes')">Maria Abrantes</p>
+                    <p class="hidden about" id="maria_abrantes_about">
+                        Designer Multidisciplinar com interesse por trabalhos manuais
+
+                    </p>
+                    
+                    <p class="colaboradores" id="miguel_teodoro" onclick="show_about('miguel_teodoro')">Miguel Teodoro</p>
+                    <p class="hidden about" id="miguel_teodoro_about">
+                        Designer Multidisciplinar com interesse por trabalhos manuais
+
+                    </p>
+                    
+                    <p class="colaboradores" id="jonathan_boetger" onclick="show_about('jonathan_boetger')">Jonathan Boetger</p>
+                    <p class="hidden about" id="jonathan_boetger_about">
+                        Designer Multidisciplinar com interesse por trabalhos manuais
+
+                    </p>
+                    
+                    <p class="colaboradores" id="silveira" onclick="show_about('silveira')">Silveira</p>
+                    <p class="hidden about" id="silveira_about">
+                        Designer Multidisciplinar com interesse por trabalhos manuais
+
+                    </p>
+                    
+                    <p class="colaboradores" id="lara_lopes" onclick="show_about('lara_lopes')">Lara Lopes</p>
+                    <p class="hidden about" id="lara_lopes_about">
+                        Designer Multidisciplinar com interesse por trabalhos manuais
+
+                    </p>
+                    
+                    <p class="colaboradores" id="valdemar_lopes" onclick="show_about('valdemar_lopes')">Valdemar Lopes</p>
+                    <p class="hidden about" id="valdemar_lopes_about">
+                        Designer Multidisciplinar com interesse por trabalhos manuais
+
+                    </p>
+                
+                </div>
+                <!-- /COLABORADORES -->
+
+                <!-- CONTACTOS -->
+                <div class="full_page main hidden" id="contactos_div">
+                    <p style="padding-bottom: 0px; margin-bottom: 0px;">Casal do Convento, Arrezima</p>
+                    <p style="padding-bottom: 0px; margin-bottom: 0px;">2140-302, Pinheiro Grande</p>
+                    <p style="padding-bottom: 0px; margin-bottom: 0px;">Santarém, Portugal</p>
+                    <p style="padding-bottom: 0px; margin-bottom: 0px;">&nbsp;</p>
+                    <p style="padding-bottom: 0px; margin-bottom: 0px;">geral@umpatamar.com</p>
+                </div>
+                <!-- /CONTACTOS -->
+
             </div>
         </div>
         
@@ -232,3 +390,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <script src="./layout.js"></script>
+<script src="./projects.js"></script>
