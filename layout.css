@@ -88,11 +88,15 @@ li.menu p:hover {
     text-decoration: none !important;
 }
 
-.lista.active {
+.lista.active > span{
     text-decoration: underline;
 }
 
-.lista:hover {
+.lista.active > small {
+    text-decoration: none;
+}
+
+.lista:hover > span {
     text-decoration: underline;
 }
 
