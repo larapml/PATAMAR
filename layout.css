@@ -24,8 +24,10 @@ p, a {
     margin-bottom: 10%;
 }
 
-#sidebar {
-    padding-left: 10%;
+.sticky {
+    position: fixed;
+    top: 5%;
+    padding-left: 2%;
 }
 
 .menu {
@@ -90,6 +92,7 @@ li.menu p:hover {
 
 .lista.active > span{
     text-decoration: underline;
+    color: #86c685;
 }
 
 .lista.active > small {
@@ -105,9 +108,7 @@ li.menu p:hover {
 }
 
 .projeto_img {
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
+    width: 80%;
     margin-top: 40px;   
 }
 
@@ -124,6 +125,12 @@ li.menu p:hover {
     margin: 15%;
     margin-top: 10px;
     margin-bottom: 3%;
+}
+
+.info_text {
+    margin-top: 40px;
+    padding-left: 5%;
+    font-size: 11px;
 }
 
 .colaboradores {

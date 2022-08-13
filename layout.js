@@ -1,3 +1,18 @@
+window.onscroll = function() {scroll()};
+
+var navbar = document.getElementById("sidebar");
+var sticky = navbar.offsetTop;
+
+function scroll() {
+    console.log(window.pageYOffset);
+    if (window.pageYOffset >= document.documentElement.clientHeight) {
+        navbar.classList.add("sticky")
+    }
+    else {
+        navbar.classList.remove("sticky");
+    }
+}
+
 function slide_to(destination) {
     var element = document.getElementById(destination);
     element.scrollIntoView({behavior: "smooth"});
@@ -12,6 +27,11 @@ function logo_unhover(element) {
 }
 
 function menu_click(section) {
+    if ($("#"+section+"_menu").hasClass('active')) {
+        toogle_submenu(section);
+        return;
+    }
+
     $(".menu").each(function() {
         $(this).removeClass('active');
     });
@@ -32,6 +52,15 @@ function menu_click(section) {
     });
 
     $("#"+section+"_div").removeClass('hidden');
+}
+
+function toogle_submenu(section) {
+    if ($("#"+section+"_submenu").hasClass('hidden')) {
+        $("#"+section+"_submenu").removeClass('hidden');
+    }
+    else {
+        $("#"+section+"_submenu").addClass('hidden');
+    }
 }
 
 function projects_click(project) {
