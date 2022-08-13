@@ -28,6 +28,8 @@ p, a {
     position: fixed;
     top: 5%;
     padding-left: 2%;
+    width: 20%;
+    z-index: 1000;
 }
 
 .menu {
@@ -44,6 +46,11 @@ li.menu p:hover {
 
 .menu.active > p:first-child {
     text-decoration: underline;
+    color: #86c685 !important;
+}
+
+.projetos_submenu.active {
+    color: #86c685 !important;
 }
 
 .hidden {

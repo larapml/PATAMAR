@@ -34,34 +34,34 @@
                 <nav id="sidebar" class="">
 
                     <ul class="list-unstyled components">   
-                        <li id="sobre_menu" class="menu active" onclick="menu_click('sobre')">
-                            <p>SOBRE</p>
+                        <li id="sobre_menu" class="menu active">
+                            <p onclick="menu_click('sobre')">SOBRE</p>
                             <div class="hidden submenu" id="sobre_submenu"></div>
                         </li>
-                        <li id="projetos_menu" class="menu" onclick="menu_click('projetos')">
-                            <p>PROJETOS</p>
+                        <li id="projetos_menu" class="menu">
+                            <p onclick="menu_click('projetos')">PROJETOS</p>
                             <div class="hidden submenu" id="projetos_submenu">
-                                <p class="no_space"><small>Todos</small></p>
-                                <p class="no_space"><small>Em Construção</small></p>
-                                <p class="no_space"><small>Arquitetura</small></p>
-                                <p class="no_space"><small>Instalação</small></p>
-                                <p class="no_space"><small>Urbanismo</small></p>
-                                <p class="no_space"><small>Design</small></p>
-                                <p class="no_space"><small>Oficina</small></p>
-                                <p class="no_space"><small>Publicação</small></p>
-                                <p><small>Concurso</small></p>
+                                <p id="todos" class="no_space projetos_submenu active" onclick="filter_projects('todos')"><small>Todos</small></p>
+                                <p id="em_contrucao" class="no_space projetos_submenu" onclick="filter_projects('em_contrucao')"><small>Em Construção</small></p>
+                                <p id="arquitetura" class="no_space projetos_submenu" onclick="filter_projects('arquitetura')"><small>Arquitetura</small></p>
+                                <p id="instalacao" class="no_space projetos_submenu" onclick="filter_projects('instalacao')"><small>Instalação</small></p>
+                                <p id="urbanismo" class="no_space projetos_submenu" onclick="filter_projects('urbanismo')"><small>Urbanismo</small></p>
+                                <p id="design" class="no_space projetos_submenu" onclick="filter_projects('design')"><small>Design</small></p>
+                                <p id="oficina" class="no_space projetos_submenu" onclick="filter_projects('oficina')"><small>Oficina</small></p>
+                                <p id="publicacao" class="no_space projetos_submenu" onclick="filter_projects('publicacao')"><small>Publicação</small></p>
+                                <p id="concurso" class="projetos_submenu" onclick="filter_projects('concurso')"><small>Concurso</small></p>
                             </div>
                         </li>
-                        <li id="servicos_menu" class="menu" onclick="menu_click('servicos')">
-                            <p>SERVIÇOS</p>
+                        <li id="servicos_menu" class="menu">
+                            <p onclick="menu_click('servicos')">SERVIÇOS</p>
                             <div class="hidden submenu" id="servicos_submenu"></div>
                         </li>
-                        <li id="colaboradores_menu" class="menu" onclick="menu_click('colaboradores')">
-                            <p>COLABORADORES</p>
+                        <li id="colaboradores_menu" class="menu">
+                            <p onclick="menu_click('colaboradores')">COLABORADORES</p>
                             <div class="hidden submenu" id="colaboradores_submenu"></div>
                         </li>
-                        <li id="contactos_menu" class="menu" onclick="menu_click('contactos')">
-                            <p>CONTACTOS</p>
+                        <li id="contactos_menu" class="menu">
+                            <p onclick="menu_click('contactos')">CONTACTOS</p>
                             <div class="hidden submenu" id="contactos_submenu"></div>
                         </li>
                     </ul>
@@ -108,7 +108,7 @@
                 <div class="full_page hidden main" id="projetos_div">
 
                     <!-- GRADE VIVA -->
-                    <section>
+                    <section id="grade_viva_section" class="projetos_section">
                         <p id="grade_viva_menu" class="lista no_space projetos" onclick="projects_click('grade_viva')"> 
                             <span>Grade Viva</span> <small>Em Construção, Urbanismo</small>
                         </p>
@@ -119,7 +119,7 @@
                     <!-- /GRADE VIVA -->
 
                     <!-- BOUSSANA SCHOOL -->
-                    <section>
+                    <section id="boussana_section" class="projetos_section">
                         <p id="boussana_menu" class="lista no_space projetos" onclick="projects_click('boussana')"> 
                             <span>Boussana School</span> <small>Concurso, Arquitetura</small>
                         </p>
@@ -151,7 +151,7 @@
                     <!-- /BOUSSANA SCHOOL -->
 
                     <!-- O SOL ADORMECIDO -->
-                    <section>
+                    <section id="sol_adormecido_section" class="projetos_section">
                         <p id="sol_adormecido_menu" class="lista no_space projetos" onclick="projects_click('sol_adormecido')"> 
                             <span>O Sol Adormecido</span> <small>Concurso, Instalação</small>
                         </p>
@@ -162,7 +162,7 @@
                     <!-- /O SOL ADORMECIDO -->
 
                     <!-- A RESPIGA DAS PEDRAS -->
-                    <section>
+                    <section id="respiga_section" class="projetos_section">
                         <p id="respiga_menu" class="lista no_space projetos" onclick="projects_click('respiga')">
                             <span>A Respiga das Pedras</span> <small>Urbanismo</small>
                         </p>
@@ -173,7 +173,7 @@
                     <!-- /A RESPIGA DAS PEDRAS -->
 
                     <!-- CHALEIRA DE COMPOSTAGEM -->
-                    <section>
+                    <section id="chaleira_compostagem_section" class="projetos_section">
                         <p id="chaleira_compostagem_menu" class="lista no_space projetos" onclick="projects_click('chaleira_compostagem')">
                             <span>Chaleira de Compostagem</span> <small>Design</small>
                         </p>
@@ -184,7 +184,7 @@
                     <!-- /CHALEIRA DE COMPOSTAGEM -->
 
                     <!-- CASA PARA UM BURRO E DUAS CABRAS -->
-                    <section>
+                    <section id="casa_burro_cabras_section" class="projetos_section">
                         <p id="casa_burro_cabras_menu" class="lista no_space projetos" onclick="projects_click('casa_burro_cabras')">
                             <span>Casa para um Burro e duas Cabras</span> <small>Arquitetura</small>
                         </p>
@@ -195,7 +195,7 @@
                     <!-- /CASA PARA UM BURRO E DUAS CABRAS -->
 
                     <!-- O CALQUE DAS FOLHAS -->
-                    <section>
+                    <section id="calque_folhas_section" class="projetos_section">
                         <p id="calque_folhas_menu" class="lista no_space projetos" onclick="projects_click('calque_folhas')"> 
                             <span>O Calque das Folhas</span> <small>Oficina</small>
                         </p>
@@ -206,7 +206,7 @@
                     <!-- /O CALQUE DAS FOLHAS -->
 
                     <!-- SUPORTE-PORTÁTIL -->
-                    <section>
+                    <section id="suporte_portatil_section" class="projetos_section">
                         <p id="suporte_portatil_menu" class="lista no_space projetos" onclick="projects_click('suporte_portatil')">                     
                             <span>Suporte-Portátil</span> <small>Design</small>
                         </p>
@@ -217,7 +217,7 @@
                     <!-- /SUPORTE-PORTÁTIL -->
 
                     <!-- UMA ESCULTURA PARA PÔR OVOS -->
-                    <section>
+                    <section id="ovos_section" class="projetos_section">
                         <p id="ovos_menu" class="lista no_space projetos" onclick="projects_click('ovos')"> 
                             <span>Uma Escultura Para Pôr Ovos</span> <small>Arquitetura</small>
                         </p>
@@ -228,7 +228,7 @@
                     <!-- /UMA ESCULTURA PARA PÔR OVOS -->
 
                     <!-- UMA PLATAFORMA ENTRE DOIS EUCALIPTOS -->
-                    <section>
+                    <section id="plataforma_section" class="projetos_section">
                         <p id="plataforma_menu" class="lista no_space projetos" onclick="projects_click('plataforma')"> 
                             <span>Uma Plataforma entre Dois Eucaliptos</span> <small>Oficina</small>
                         </p>
@@ -239,7 +239,7 @@
                     <!-- /UMA PLATAFORMA ENTRE DOIS EUCALIPTOS -->
 
                     <!-- FERRO NOVO -->
-                    <section>
+                    <section id="ferro_novo_section" class="projetos_section">
                         <p id="ferro_novo_menu" class="lista no_space projetos" onclick="projects_click('ferro_novo')"> 
                             <span>Ferro Novo</span> <small>Oficina</small>
                         </p>
@@ -250,7 +250,7 @@
                     <!-- /FERRO NOVO -->
 
                     <!-- AH LIXO, LIXO -->
-                    <section>
+                    <section id="lixo_lixo_section" class="projetos_section">
                         <p id="lixo_lixo_menu" class="lista no_space projetos" onclick="projects_click('lixo_lixo')"> 
                             <span>Ah lixo, lixo</span> <small>Design</small>
                         </p>

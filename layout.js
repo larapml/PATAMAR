@@ -4,7 +4,6 @@ var navbar = document.getElementById("sidebar");
 var sticky = navbar.offsetTop;
 
 function scroll() {
-    console.log(window.pageYOffset);
     if (window.pageYOffset >= document.documentElement.clientHeight) {
         navbar.classList.add("sticky")
     }
