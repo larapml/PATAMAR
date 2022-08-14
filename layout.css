@@ -38,19 +38,20 @@ p, a {
     font-size: 20px;
     cursor: pointer;
     font-weight: bold;
+    line-height: 0.7;
 }
 
 li.menu p:hover {
-    color: #86c685 !important;
+    color: #6FC57A !important;
 }
 
 .menu.active > p:first-child {
     text-decoration: underline;
-    color: #86c685 !important;
+    color: #6FC57A !important;
 }
 
 .projetos_submenu.active {
-    color: #86c685 !important;
+    color: #6FC57A !important;
 }
 
 .hidden {
@@ -69,8 +70,12 @@ li.menu p:hover {
     margin-bottom: 3%;
 }
 
+.main {
+    padding-top: 2%;
+}
+
 .full_page {
-    min-height: 90vh;
+    min-height: 85vh;
 }
 
 .italic {
@@ -99,7 +104,7 @@ li.menu p:hover {
 
 .lista.active > span{
     text-decoration: underline;
-    color: #86c685;
+    color: #6FC57A;
 }
 
 .lista.active > small {
