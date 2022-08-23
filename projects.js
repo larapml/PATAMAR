@@ -5,7 +5,7 @@ var categories = {
     "arquitetura": ["boussana", "casa_burro_cabras", "ovos"],
     "instalacao": ["sol_adormecido"],
     "design": ["chaleira_compostagem", "suporte_portatil", "lixo_lixo"],
-    "oficina": ["calque_folhas", "plataforma", "ferro_novo"]
+    "oficina": ["calque_folhas", "plataforma", "ferro_novo", "corpos_alameda"]
 }
 
 function filter_projects(category) {

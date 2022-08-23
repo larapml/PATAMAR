@@ -56,6 +56,10 @@
                             <p onclick="menu_click('servicos')">SERVIÇOS</p>
                             <div class="hidden submenu" id="servicos_submenu"></div>
                         </li>
+                        <li id="inventario_menu" class="menu">
+                            <p onclick="menu_click('inventario')">INVENTÁRIO</p>
+                            <div class="hidden submenu" id="inventario_submenu"></div>
+                        </li>
                         <li id="colaboradores_menu" class="menu">
                             <p onclick="menu_click('colaboradores')">COLABORADORES</p>
                             <div class="hidden submenu" id="colaboradores_submenu"></div>
@@ -89,17 +93,7 @@
                         <p style="padding-bottom: 10px; font-size: 18px;">
                             <b><span class="italic">Patamar</span> é tal e qual o que é: um patamar. Entre-lances e entre-ideias, com vários declives, 
                             flutuante, catalizador de movimentos e vontades.</b>
-                        </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, dolor at rhoncus iaculis, nisi erat scelerisque odio, et tristique erat turpis vitae urna. Vestibulum interdum purus tincidunt, suscipit odio in, eleifend leo. Curabitur eget nisi at nibh sollicitudin mattis eget nec dui. Donec facilisis massa at pretium tempus. Nunc ultrices in est lacinia rhoncus. Donec quis dolor sem. Morbi porttitor quam ut tortor auctor vestibulum. Vivamus sed orci ligula. Ut maximus magna quis diam fermentum, ac consectetur mauris commodo. Sed quis metus metus. </p>
-                                
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, dolor at rhoncus iaculis, nisi erat scelerisque odio, et tristique erat turpis vitae urna. Vestibulum interdum purus tincidunt, suscipit odio in, eleifend leo. Curabitur eget nisi at nibh sollicitudin mattis eget nec dui. Donec facilisis massa at pretium tempus. Nunc ultrices in est lacinia rhoncus. Donec quis dolor sem. Morbi porttitor quam ut tortor auctor vestibulum. Vivamus sed orci ligula. Ut maximus magna quis diam fermentum, ac consectetur mauris commodo. Sed quis metus metus. </p>
-                                
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, dolor at rhoncus iaculis, nisi erat scelerisque odio, et tristique erat turpis vitae urna. Vestibulum interdum purus tincidunt, suscipit odio in, eleifend leo. Curabitur eget nisi at nibh sollicitudin mattis eget nec dui. Donec facilisis massa at pretium tempus. Nunc ultrices in est lacinia rhoncus. Donec quis dolor sem. Morbi porttitor quam ut tortor auctor vestibulum. Vivamus sed orci ligula. Ut maximus magna quis diam fermentum, ac consectetur mauris commodo. Sed quis metus metus. </p>
-                                
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, dolor at rhoncus iaculis, nisi erat scelerisque odio, et tristique erat turpis vitae urna. Vestibulum interdum purus tincidunt, suscipit odio in, eleifend leo. Curabitur eget nisi at nibh sollicitudin mattis eget nec dui. Donec facilisis massa at pretium tempus. Nunc ultrices in est lacinia rhoncus. Donec quis dolor sem. Morbi porttitor quam ut tortor auctor vestibulum. Vivamus sed orci ligula. Ut maximus magna quis diam fermentum, ac consectetur mauris commodo. Sed quis metus metus. </p>
-                                
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, dolor at rhoncus iaculis, nisi erat scelerisque odio, et tristique erat turpis vitae urna. Vestibulum interdum purus tincidunt, suscipit odio in, eleifend leo. Curabitur eget nisi at nibh sollicitudin mattis eget nec dui. Donec facilisis massa at pretium tempus. Nunc ultrices in est lacinia rhoncus. Donec quis dolor sem. Morbi porttitor quam ut tortor auctor vestibulum. Vivamus sed orci ligula. Ut maximus magna quis diam fermentum, ac consectetur mauris commodo. Sed quis metus metus. </p>
-                                
+                        </p>     
                     </div>
                 </div>
                 <!-- /SOBRE -->
@@ -107,13 +101,46 @@
                 <!-- PROJETOS -->
                 <div class="full_page hidden main" id="projetos_div">
 
+                    <!-- CORPOS NA ALAMEDA -->
+                    <section id="corpos_alameda_section" class="projetos_section">
+                        <p id="corpos_alameda_menu" class="lista no_space projetos" onclick="projects_click('corpos_alameda')"> 
+                            <span>Corpos na Alameda</span> <small>Oficina</small>
+                        </p>
+                        <div class="hidden projeto_sobre" id="corpos_alameda_div">
+                            <!--IMAGENS-->
+
+                            <div class="info_text">
+                                <div>
+                                    <p>A convite de Fernanda Fragateiro, fomos desafiados a elaborar um exercício com os alunos de 1º ano de Arquitetura do Técnico de Lisboa para pensar a composição e disposição de corpos no espaço urbano através do desenho. Utilizando a locomoção, pausas e várias dinâmicas para progredir no espaço, o grupos foi desafiados a desenvolver uma consciência do corpo como unidade de algo maior, incluindo os elementos externos à atividade.</p>
+                                </div>
+
+                                <p class="no_space">2022</p>
+                                <p class="no_space"><small>Técnico Lisboa, Alameda</small></p>
+                                <p class="no_space"><small>Hugo Lopes, Maria Abrantes</small></p>
+                            </div>
+                            <p>&nbsp;</p>
+                        </div>
+                    </section>
+                    <!-- /CORPOS NA ALAMEDA -->
+
                     <!-- GRADE VIVA -->
                     <section id="grade_viva_section" class="projetos_section">
                         <p id="grade_viva_menu" class="lista no_space projetos" onclick="projects_click('grade_viva')"> 
                             <span>Grade Viva</span> <small>Em Construção, Urbanismo</small>
                         </p>
                         <div class="hidden projeto_sobre" id="grade_viva_div">
-                            <h1>Grade Viva</h1>
+                            <!--IMAGENS-->
+
+                            <div class="info_text">
+                                <div>
+                                    <p>Para a consolidação de dois taludes optamos por explorar técnicas de engenharia natural, ao invés dos metódos de engenharia cívil tradicionais. Esta obra teve a consultadoria da Ecosalix.</p>
+                                </div>
+
+                                <p class="no_space">2022</p>
+                                <p class="no_space"><small>Arrezima</small></p>
+                                <p class="no_space"><small>António Silveira, Gonçalo Leal, Hugo Lopes, Valdemar Lopes</small></p>
+                            </div>
+                            <p>&nbsp;</p>
                         </div>
                     </section>
                     <!-- /GRADE VIVA -->
@@ -137,13 +164,16 @@
                             </div>
 
                             <div class="info_text">
-                                <div id="ecole_secundaire_boussana_div">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, dolor at rhoncus iaculis, nisi erat scelerisque odio, et tristique erat turpis vitae urna. Vestibulum interdum purus tincidunt, suscipit odio in, eleifend leo. Curabitur eget nisi at nibh sollicitudin mattis eget nec dui. Donec facilisis massa at pretium tempus. Nunc ultrices in est lacinia rhoncus. Donec quis dolor sem. Morbi porttitor quam ut tortor auctor vestibulum. Vivamus sed orci ligula. Ut maximus magna quis diam fermentum, ac consectetur mauris commodo. Sed quis metus metus. </p>
+                                <div>
+                                    <p>Imaginamos uma escola secundária como uma configuração de módulos numa integração holística com todos os elementos da paisagem. Propomos um método construtivo flexível para atender não apenas a crescente necessidade de escolarização na área, mas também para futuras construções na região.</p>
+                                    <p>Propomos a introdução de um 'módulo de duas salas' que se repete ao longo de todo o esquema, de acordo com as fases de construção da escola. Este módulo consiste em duas salas retangulares que pivotam 20º graus uma sobre a outra. Essa pivotação cria um recanto entre as salas de aula, criando uma área sombreada, incentivando os alunos a comunicação entre os alunos antes e depois das aulas.</p>
+                                    <p>Identificamos o caminho norte-sul existente no terreno e o entrelaçamos com o pátio da escola. Enquanto a entrada norte é mais discreta para protegê-la da estrada de terra que percorre o lado norte do terreno, a entrada sul da escola é mais larga, pois é sequenciada pelo pátio coberto. É por esta entrada que ambos os pátios se conectam e que a escola se abre para a horta comunitária. </p>
                                 </div>
 
-                                <p class="subtitulo"> Proposta para Escola Secundária em Kafountine</p>
-                                <p class="no_space"><small>Localização: Senegal</small></p>
-                                <p class="no_space"><small>Ano: 2022</small></p>
+                                <p class="no_space">2022</p>
+                                <p class="no_space"><small>Kafountine, Senegal</small></p>
+                                <p class="no_space"><small>Proposta para Earth School Competition, Kakolum/Archstormin</small></p>
+                                <p class="no_space"><small>Hugo Lopes, Joey Boettger</small></p>
                             </div>
                             <p>&nbsp;</p>
                         </div>
@@ -156,7 +186,22 @@
                             <span>O Sol Adormecido</span> <small>Concurso, Instalação</small>
                         </p>
                         <div class="hidden projeto_sobre" id="sol_adormecido_div">
-                            <h1>O Sol Adormecido</h1>
+                            <!--IMAGENS-->
+
+                            <div class="info_text">
+                                <div>
+                                    <p>O Sol Adormecido introduz uma nova coreografia no espaço, reforçando a natureza intersticial do pátio. A instalação introduz o lúdico como ferramenta analítica de envolvimento com o local, permitindo a ativação de pequenas narrativas decorrentes da vida cotidiana.</p>
+                                    <p>Para intervir no local, foi identificado um vocabulário de formas através da análise de elementos arquitetônicos existentes no local. Como uma extensão da rua para o pátio, a instalação torna-se uma interface entre o público e o privado. </p>
+                                    <p>Assim, as arcadas que compõem a fachada e o arco interno que atua como comunicador entre os pátios tornam-se elementos integrantes de uma composição efêmera que transforma a vivência do lugar ao expandir do domínio público para o pátio. </p>
+                                    <p>Na entrada, a arcada da fachada inclinada joga com o deslocamento do elemento arquitetônico para criar novas narrativas e relações com a rua e os pedestres. O elemento destacado atua também como prelúdio ou convite para entrar no pátio e vivenciar o segundo elemento da intervenção. Dentro do pátio, um palco para a vida quotidiana e encontros comunitários é montado girando a forma negativa/interna do arco sobre o chão.</p>
+                                </div>
+
+                                <p class="no_space">2022</p>
+                                <p class="no_space"><small>Calle Obispo Bustamante, Logroño</small></p>
+                                <p class="no_space"><small>Proposta para Concéntrico 08 - Logroño International Festival of Architecture and Design</small></p>                                
+                                <p class="no_space"><small>Hugo Lopes, Miguel Teodoro</small></p>
+                            </div>
+                            <p>&nbsp;</p>
                         </div>
                     </section>
                     <!-- /O SOL ADORMECIDO -->
@@ -167,7 +212,18 @@
                             <span>A Respiga das Pedras</span> <small>Urbanismo</small>
                         </p>
                         <div class="hidden projeto_sobre" id="respiga_div">
-                            <h1>A Respiga das Pedras</h1>
+                            <!--IMAGENS-->
+
+                            <div class="info_text">
+                                <div>
+                                    <p>Como os respigadores e respigadoras de Agnès Varda, também respigamos as pedras à volta do terreno. O processo da respiga da pedra uma a uma, foi longo mas profícuo. No caminho das pedras respigadas inscrevemos um código.</p>
+                                </div>
+
+                                <p class="no_space">2020</p>
+                                <p class="no_space"><small>Arrezima</small></p>
+                                <p class="no_space"><small>David Monteiro, Eduardo Pereira, Helena Pereira, Hugo Lopes, João Gama, Valdemar Lopes</small></p>
+                            </div>
+                            <p>&nbsp;</p>
                         </div>
                     </section>
                     <!-- /A RESPIGA DAS PEDRAS -->
@@ -178,7 +234,18 @@
                             <span>Chaleira de Compostagem</span> <small>Design</small>
                         </p>
                         <div class="hidden projeto_sobre" id="chaleira_compostagem_div">
-                            <h1>Chaleira de Compostagem</h1>
+                            <!--IMAGENS-->
+
+                            <div class="info_text">
+                                <div>
+                                    <p></p>
+                                </div>
+
+                                <p class="no_space">2020</p>
+                                <p class="no_space"><small>Arrezima</small></p>
+                                <p class="no_space"><small>Hugo Lopes, Margarida Pereira, Valdemar Lopes</small></p>
+                            </div>
+                            <p>&nbsp;</p>
                         </div>
                     </section>
                     <!-- /CHALEIRA DE COMPOSTAGEM -->
@@ -189,7 +256,18 @@
                             <span>Casa para um Burro e duas Cabras</span> <small>Arquitetura</small>
                         </p>
                         <div class="hidden projeto_sobre" id="casa_burro_cabras_div">
-                            <h1>Casa para um Burro e duas Cabras</h1>
+                            <!--IMAGENS-->
+
+                            <div class="info_text">
+                                <div>
+                                    <p></p>
+                                </div>
+
+                                <p class="no_space">2020</p>
+                                <p class="no_space"><small>Arrezima</small></p>
+                                <p class="no_space"><small>Hugo Lopes</small></p>
+                            </div>
+                            <p>&nbsp;</p>
                         </div>
                     </section>
                     <!-- /CASA PARA UM BURRO E DUAS CABRAS -->
@@ -200,7 +278,18 @@
                             <span>O Calque das Folhas</span> <small>Oficina</small>
                         </p>
                         <div class="hidden projeto_sobre" id="calque_folhas_div">
-                            <h1>O Calque das Folhas</h1>
+                            <!--IMAGENS-->
+
+                            <div class="info_text">
+                                <div>
+                                    <p>Produção de sacos com tingimento natural.</p>
+                                </div>
+
+                                <p class="no_space">2020</p>
+                                <p class="no_space"><small>Arrezima</small></p>
+                                <p class="no_space"><small>Ana Doe, Daniela Doe, Margarida Pereira, Valdemar Lopes</small></p>
+                            </div>
+                            <p>&nbsp;</p>
                         </div>
                     </section>
                     <!-- /O CALQUE DAS FOLHAS -->
@@ -211,7 +300,18 @@
                             <span>Suporte-Portátil</span> <small>Design</small>
                         </p>
                         <div class="hidden projeto_sobre" id="suporte_portatil_div">
-                            <h1>Suporte-Portátil</h1>
+                            <!--IMAGENS-->
+
+                            <div class="info_text">
+                                <div>
+                                    <p>Molde de três peças em mdf 18mm.</p>
+                                </div>
+
+                                <p class="no_space">2020</p>
+                                <p class="no_space"><small>Arrezima</small></p>
+                                <p class="no_space"><small>Hugo Lopes</small></p>
+                            </div>
+                            <p>&nbsp;</p>
                         </div>
                     </section>
                     <!-- /SUPORTE-PORTÁTIL -->
@@ -222,7 +322,19 @@
                             <span>Uma Escultura Para Pôr Ovos</span> <small>Arquitetura</small>
                         </p>
                         <div class="hidden projeto_sobre" id="ovos_div">
-                            <h1>Uma Escultura Para Pôr Ovos</h1>
+                            <!--IMAGENS-->
+
+                            <div class="info_text">
+                                <div>
+                                    <p>Até à construção da Casa do Burro e dos Três Cabras, foi projectada uma estrutura temporária para as galinhas, com o intuito de testar as canas bravas como material adequado para a construção de divisórias e fachadas.</p>
+                                    <p>A Escultura para Pôr Ovos é um galinheiro modular, construído com materiais simples: ripas de pinho para a estrutura, madeira recuperada, canas para as zonas fechadas e poleiros e chapa de metal corrugado. O interior é ventilado e permite que a luz natural do dia seja filtrada. A abertura traseira permite a recolha dos ovos.</p>
+                                </div>
+
+                                <p class="no_space">2020</p>
+                                <p class="no_space"><small>Arrezima</small></p>
+                                <p class="no_space"><small>Hugo Lopes, Valdemar Lopes</small></p>
+                            </div>
+                            <p>&nbsp;</p>
                         </div>
                     </section>
                     <!-- /UMA ESCULTURA PARA PÔR OVOS -->
@@ -233,7 +345,18 @@
                             <span>Uma Plataforma entre Dois Eucaliptos</span> <small>Oficina</small>
                         </p>
                         <div class="hidden projeto_sobre" id="plataforma_div">
-                            <h1>Uma Plataforma entre Dois Eucaliptos</h1>
+                            <!--IMAGENS-->
+
+                            <div class="info_text">
+                                <div>
+                                    <p></p>
+                                </div>
+
+                                <p class="no_space">2020</p>
+                                <p class="no_space"><small>Arrezima</small></p>
+                                <p class="no_space"><small>Hugo Lopes, Lara Lopes, Valdemar Lopes</small></p>
+                            </div>
+                            <p>&nbsp;</p>
                         </div>
                     </section>
                     <!-- /UMA PLATAFORMA ENTRE DOIS EUCALIPTOS -->
@@ -244,7 +367,18 @@
                             <span>Ferro Novo</span> <small>Oficina</small>
                         </p>
                         <div class="hidden projeto_sobre" id="ferro_novo_div">
-                            <h1>Ferro Novo</h1>
+                            <!--IMAGENS-->
+
+                            <div class="info_text">
+                                <div>
+                                    <p></p>
+                                </div>
+
+                                <p class="no_space">2020</p>
+                                <p class="no_space"><small>Arrezima</small></p>
+                                <p class="no_space"><small>António Silveira, Hugo Lopes, Valdemar Lopes</small></p>
+                            </div>
+                            <p>&nbsp;</p>
                         </div>
                     </section>
                     <!-- /FERRO NOVO -->
@@ -255,7 +389,18 @@
                             <span>Ah lixo, lixo</span> <small>Design</small>
                         </p>
                         <div class="hidden projeto_sobre" id="lixo_lixo_div">
-                            <h1>Ah lixo, lixo</h1>
+                            <!--IMAGENS-->
+
+                            <div class="info_text">
+                                <div>
+                                    <p></p>
+                                </div>
+
+                                <p class="no_space">2020</p>
+                                <p class="no_space"><small>Arrezima</small></p>
+                                <p class="no_space"><small>Hugo Lopes, Valdemar Lopes</small></p>
+                            </div>
+                            <p>&nbsp;</p>
                         </div>
                     </section>
                     <!-- /AH LIXO, LIXO -->
@@ -333,6 +478,12 @@
                     
                     <p class="colaboradores" id="valdemar_lopes" onclick="show_about('valdemar_lopes')">Valdemar Lopes</p>
                     <p class="hidden about" id="valdemar_lopes_about">
+                        Designer Multidisciplinar com interesse por trabalhos manuais
+
+                    </p>
+
+                    <p class="colaboradores" id="goncalo_leal" onclick="show_about('goncalo_leal')">Gonçalo Leal</p>
+                    <p class="hidden about" id="goncalo_leal_about">
                         Designer Multidisciplinar com interesse por trabalhos manuais
 
                     </p>

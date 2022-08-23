@@ -58,6 +58,10 @@ li.menu p:hover {
     display: none;
 }
 
+.submenu {
+    padding-left: 10px;
+}
+
 .show{
     display:block;
 }
