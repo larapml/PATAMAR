@@ -143,6 +143,10 @@ li.menu p:hover {
     margin-bottom: 3%;
 }
 
+.store_item > img {
+    width: 50%;
+}
+
 .info_text {
     margin-top: 40px;
     padding-left: 5%;

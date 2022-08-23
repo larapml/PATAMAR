@@ -3,6 +3,11 @@ window.onscroll = function() {scroll()};
 var navbar = document.getElementById("sidebar");
 var sticky = navbar.offsetTop;
 
+$(document).ready(function() {
+    // Initialize the store
+    store_init();
+});
+
 function scroll() {
     if (window.pageYOffset >= document.documentElement.clientHeight) {
         navbar.classList.add("sticky")
