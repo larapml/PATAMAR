@@ -18,11 +18,11 @@ function slide_to(destination) {
 }
 
 function logo_hover(element) {
-    element.setAttribute('src', './imagens/patamaro_hover.jpg');
+    element.setAttribute('src', './images/patamaro_hover.jpg');
 }
 
 function logo_unhover(element) {
-    element.setAttribute('src', './imagens/patamaro.jpg');
+    element.setAttribute('src', './images/patamaro.jpg');
 }
 
 function menu_click(section) {

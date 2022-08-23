@@ -39,47 +39,102 @@ function filter_projects(category) {
     }
 }
 
-var boussana = ["imagens/senegal3.jpg", "imagens/senegal.png", "imagens/senegal1.jpg"];
-var calque_folhas = ["imagens/calque.jpg", "imagens/calquedasfolhas.jpg", "imagens/calquedasfolhas2.jpg" ];
-var sol_adormecido = ["imagens/soladormecido.jpg", "imagens/soladormecido1.jpg", "imagens/soladormecido2.jpg"];
-var ovos = ["imagens/ovos2.jpg", "imagens/ovos.jpg"];
+var project_images = {
+    "boussana": [],
+    "calque_folhas": [
+        "images/projects/calque_folhas/calque_folhas_1.JPG", 
+        "images/projects/calque_folhas/calque_folhas_2.JPG", 
+        "images/projects/calque_folhas/calque_folhas_5.JPG", 
+        "images/projects/calque_folhas/calque_folhas_6.JPG",
+        "images/projects/calque_folhas/calque_folhas_7.JPG"
+    ],
+    "casa_burro_cabras": [
+        "images/projects/casa_burro_cabras/casa_burro_cabras_1.jpg"
+    ],
+    "chaleira_compostagem": [
+        "images/projects/chaleira_compostagem/chaleira_compostagem_1.jpg",
+        "images/projects/chaleira_compostagem/chaleira_compostagem_2.jpg",
+        "images/projects/chaleira_compostagem/chaleira_compostagem_4.jpg",
+    ],
+    "corpos_alameda": [
+        "images/projects/corpos_alameda/corpos_alameda_1.jpg",
+        "images/projects/corpos_alameda/corpos_alameda_2.jpg",
+        "images/projects/corpos_alameda/corpos_alameda_4.jpg",
+        "images/projects/corpos_alameda/corpos_alameda_5.jpg",
+        "images/projects/corpos_alameda/corpos_alameda_6.jpg",
+        "images/projects/corpos_alameda/corpos_alameda_7.jpg",
+    ],
+    "ferro_novo": [
+        "images/projects/ferro_novo/ferro_novo_1.jpg",
+        "images/projects/ferro_novo/ferro_novo_4.jpg",
+    ],
+    "grade_viva": [
+        "images/projects/grade_viva/grade_viva_1.jpg"
+    ],
+    "lixo_lixo": [
+        "images/projects/lixo_lixo/lixo_lixo_1.jpg",
+        "images/projects/lixo_lixo/lixo_lixo_2.jpg",
+    ],
+    "ovos": [
+        "images/projects/ovos/ovos_0.jpg",
+        "images/projects/ovos/ovos_1.jpg",
+        "images/projects/ovos/ovos_2.jpg",
+        "images/projects/ovos/ovos_3.jpg",
+        "images/projects/ovos/ovos_5.jpg",
+        "images/projects/ovos/ovos_6.jpg",
+        "images/projects/ovos/ovos_gif1.jpg",
+        "images/projects/ovos/ovos_gif2.jpg",
+    ],
+    "plataforma": [
+        "images/projects/plataforma/plataforma_1.jpg",
+        "images/projects/plataforma/plataforma_2.jpg",
+    ],
+    "respiga": [
+        "images/projects/respiga/respiga_1.JPG",
+        "images/projects/respiga/respiga_2.jpg",
+        "images/projects/respiga/respiga_3.jpg",
+    ],
+    "suporte_portatil": [
+        "images/projects/suporte_portatil/suporte_portatil_1.jpg",
+        "images/projects/suporte_portatil/suporte_portatil_2.jpg",
+        "images/projects/suporte_portatil/suporte_portatil_3.jpg",
+    ]
+};
 
-// <BOUSSANA>
-$("#ecole_secundaire_boussana_forward").click(function() {
-    let img = $("#ecole_secundaire_boussana_img");
+$(".projeto_btn.back").click(function(event) {
+    var project = event.target.id.replace("_back", "");
+    console.log(project);
 
-    let actual_img = img.attr("src");
+    let img_holder = $("#"+project+"_img");
+    let actual_img = img_holder.attr("src");
 
-    let next_index = boussana.indexOf(actual_img);
-
-    if (next_index !== -1) {
-        next_index += 1;
-
-        if (next_index >= boussana.length) {
-            next_index = 0;
-        }
-        
-        img.attr("src", boussana[next_index]);
-        // document.getElementById("ecole_secundaire_boussana_img").scrollIntoView();
-    }
-});
-
-$("#ecole_secundaire_boussana_back").click(function() {
-    let img = $("#ecole_secundaire_boussana_img");
-
-    let actual_img = img.attr("src");
-
-    let next_index = boussana.indexOf(actual_img);
-
+    let next_index = project_images[project].indexOf(actual_img);
     if (next_index !== -1) {
         next_index -= 1;
         
         if (next_index < 0) {
-            next_index = boussana.length - 1;
+            next_index = project_images[project].length - 1;
         }
 
-        img.attr("src", boussana[next_index]);
-        // document.getElementById("ecole_secundaire_boussana_img").scrollIntoView();
+        console.log(project_images[project][next_index])
+        img_holder.attr("src", project_images[project][next_index]);
     }
 });
-// </BOUSSANA>
+
+$(".projeto_btn.forward").click(function(event) {
+    var project = event.target.id.replace("_forward", "");
+
+    let img_holder = $("#"+project+"_img");
+    let actual_img = img_holder.attr("src");
+
+    let next_index = project_images[project].indexOf(actual_img);
+    if (next_index !== -1) {
+        next_index += 1;
+        
+        if (next_index >= project_images[project].length) {
+            next_index = 0;
+        }
+
+        img_holder.attr("src", project_images[project][next_index]);
+    }
+});
