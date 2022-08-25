@@ -31,25 +31,27 @@ function logo_unhover(element) {
 }
 
 function menu_click(section) {
-    if ($("#"+section+"_menu").hasClass('active')) {
-        toogle_submenu(section);
-        return;
-    }
 
     $(".menu").each(function() {
         $(this).removeClass('active');
     });
 
     $(".submenu").each(function() {
+        $(this).removeClass('active');
+    });
+
+    $("#"+section+"_menu").addClass('active');
+    $("#"+section+"_submenu").removeClass('hidden');
+    $("#"+section+"_angle").removeClass('fa-angle-down');
+    $("#"+section+"_angle").addClass('fa-angle-up');
+
+    $(".main").each(function() {
         if (!$(this).hasClass('hidden')) {
             $(this).addClass('hidden');
         }
     });
 
-    $("#"+section+"_menu").addClass('active');
-    $("#"+section+"_submenu").removeClass('hidden');
-
-    $(".main").each(function() {
+    $(".sub").each(function() {
         if (!$(this).hasClass('hidden')) {
             $(this).addClass('hidden');
         }
@@ -58,12 +60,45 @@ function menu_click(section) {
     $("#"+section+"_div").removeClass('hidden');
 }
 
+function submenu_click(subsection, section) {
+    $("."+ section +"_submenu").each(function() {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        }
+    });
+
+    $(".menu").each(function() {
+        $(this).removeClass('active');
+    });
+
+    $("#"+section+"_menu").addClass('active');
+    $("#"+subsection).addClass('active');
+
+    $(".main").each(function() {
+        if (!$(this).hasClass('hidden')) {
+            $(this).addClass('hidden');
+        }
+    });
+
+    $(".sub").each(function() {
+        if (!$(this).hasClass('hidden')) {
+            $(this).addClass('hidden');
+        }
+    });
+
+    $("#"+subsection+"_div").removeClass('hidden');
+}
+
 function toogle_submenu(section) {
     if ($("#"+section+"_submenu").hasClass('hidden')) {
         $("#"+section+"_submenu").removeClass('hidden');
+        $("#"+section+"_angle").removeClass('fa-angle-down');
+        $("#"+section+"_angle").addClass('fa-angle-up');
     }
     else {
         $("#"+section+"_submenu").addClass('hidden');
+        $("#"+section+"_angle").removeClass('fa-angle-up');
+        $("#"+section+"_angle").addClass('fa-angle-down');
     }
 }
 

@@ -41,16 +41,20 @@ p, a {
     line-height: 0.7;
 }
 
-li.menu p:hover {
+li.menu span:hover {
     color: #6FC57A !important;
 }
 
-.menu.active > p:first-child {
+.menu.active > p:first-child > span:first-child{
     text-decoration: underline;
     color: #6FC57A !important;
 }
 
 .projetos_submenu.active {
+    color: #6FC57A !important;
+}
+
+.servicos_submenu.active {
     color: #6FC57A !important;
 }
 
@@ -72,10 +76,6 @@ li.menu p:hover {
     position: relative;
     margin-left: 1%;
     margin-bottom: 3%;
-}
-
-.main {
-    padding-top: 2%;
 }
 
 .full_page {

@@ -30,16 +30,22 @@
     <div class="container-fluid">
         <div class="row" id="content">
 
-            <div class="col-12 col-sm-2">
+            <div class="col-12 col-sm-3">
                 <nav id="sidebar" class="">
 
                     <ul class="list-unstyled components">   
                         <li id="sobre_menu" class="menu active">
-                            <p onclick="menu_click('sobre')">SOBRE</p>
+                            <p><span onclick="menu_click('sobre')">SOBRE</span></p>
                             <div class="hidden submenu" id="sobre_submenu"></div>
                         </li>
+                        <li id="servicos_menu" class="menu">
+                            <p><span onclick="menu_click('servicos')">SERVIÇOS</span><span style="text-decoration: none; padding-left: 10px;" onclick="toogle_submenu('servicos')"><i class="fa fa-angle-down" id="servicos_angle"></i></span></p>
+                            <div class="hidden submenu" id="servicos_submenu">
+                                <p id="inventario" class="servicos_submenu submenu" style="margin-top: 10px;" onclick="submenu_click('inventario', 'servicos')"><small>Inventário</small></p>
+                            </div>
+                        </li>
                         <li id="projetos_menu" class="menu">
-                            <p onclick="menu_click('projetos')">PROJETOS</p>
+                            <p><span onclick="menu_click('projetos')">PROJETOS</span><span style="text-decoration: none; padding-left: 10px;" onclick="toogle_submenu('projetos')"><i class="fa fa-angle-down" id="projetos_angle"></i></span></p>
                             <div class="hidden submenu" id="projetos_submenu">
                                 <p id="todos" class="no_space projetos_submenu active" onclick="filter_projects('todos')"><small>Todos</small></p>
                                 <p id="em_contrucao" class="no_space projetos_submenu" style="margin-top: 10px;" onclick="filter_projects('em_contrucao')"><small>Em Construção</small></p>
@@ -52,20 +58,12 @@
                                 <p id="concurso" class="projetos_submenu" style="margin-top: 10px;" onclick="filter_projects('concurso')"><small>Concurso</small></p>
                             </div>
                         </li>
-                        <li id="servicos_menu" class="menu">
-                            <p onclick="menu_click('servicos')">SERVIÇOS</p>
-                            <div class="hidden submenu" id="servicos_submenu"></div>
-                        </li>
-                        <li id="inventario_menu" class="menu">
-                            <p onclick="menu_click('inventario')">INVENTÁRIO</p>
-                            <div class="hidden submenu" id="inventario_submenu"></div>
-                        </li>
                         <li id="colaboradores_menu" class="menu">
-                            <p onclick="menu_click('colaboradores')">COLABORADORES</p>
+                            <p><span onclick="menu_click('colaboradores')">COLABORADORES</span></p>
                             <div class="hidden submenu" id="colaboradores_submenu"></div>
                         </li>
                         <li id="contactos_menu" class="menu">
-                            <p onclick="menu_click('contactos')">CONTACTOS</p>
+                            <p><span onclick="menu_click('contactos')">CONTACTOS</span></p>
                             <div class="hidden submenu" id="contactos_submenu"></div>
                         </li>
                     </ul>
@@ -73,7 +71,7 @@
                 </nav>
             </div>
 
-            <div class="col-12 col-sm-10">
+            <div class="col-12 col-sm-9">
                 
                 <!-- SOBRE -->
                 <div class="full_page main" id="sobre_div">
@@ -97,6 +95,34 @@
                     </div>
                 </div>
                 <!-- /SOBRE -->
+
+                <!-- SERVIÇOS -->
+                <div class="full_page main hidden" id="servicos_div">
+                    <p class="underlined" style="font-size: 20px;"><b>+ Projeto</b></p>
+                    <p>Estamos disponíveis para trabalhar e colaborar em projetos na área de arquitetura, design participativo, instalações, objetos de cenografia, design de produto, etc</p>
+                    
+                    <p class="underlined" style="font-size: 20px;"><b>+ Laboratório Arrezima</b></p>
+                    <p>A Arrezima é um lugar em construção e por isso requer da presença de pessoas para que a sua existência no tempo seja materializada. Entre giestais e eucaliptais, “e vida e encostas que se transformavam em matas de carvalhos e sobreiros”, este é um lugar pseudo-autóctone. ‘Autóctone’ porque por fatores naturais foi plantado na encosta por pessoas oriundas de outros lugares (e por isso existe de e com outros lugares); ‘pseudo’ porque continua a questionar a sua condição de lugar.</p>
+                    <p>A Arrezima oferece condições de vida silenciosa e resiliente para residências individuais ou coletivas e espaço de trabalho para desenvolvimento de projetos práticos e/ou de pesquisa.</p>
+                    <p>Espaços disponíveis:</p>
+                    <p style="padding-bottom: 0px; margin-bottom: 0px;">&emsp; - Oficina e espaço para materializar ideias</p>
+                    <p style="padding-bottom: 0px; margin-bottom: 0px;">&emsp; - Horta para plantar</p>
+                    <p style="padding-bottom: 0px; margin-bottom: 0px;">&emsp; - Biblioteca para ler e investigar</p>
+                    <p style="padding-bottom: 0px; margin-bottom: 0px;">&emsp; - Cozinha para cozinhar</p>
+                    <p style="padding-bottom: 0px; margin-bottom: 0px;">&emsp; - Camas para descansar</p>
+                </div>
+                <!-- /SERVIÇOS -->
+
+                <!-- INVENTÁRIO -->
+                <div class="full_page sub hidden" id="inventario_div">
+                    <div class="row" id="store" style="text-align: center;">
+
+                    </div>
+                    <div style="position: absolute; bottom: 0px; width: 95%;">
+                        <p style="text-align: center; margin-left: 0px; margin-right: 30%;"><small><b>Para mais informações contactar <span class="text-underlined">geral@umpatamar.com</span></b></small></p>
+                    </div>
+                </div>
+                <!-- /INVENTÁRIO -->
 
                 <!-- PROJETOS -->
                 <div class="full_page hidden main" id="projetos_div">
@@ -122,7 +148,7 @@
 
                             <div class="info_text">
                                 <div>
-                                    <p>A convite de Fernanda Fragateiro, fomos desafiados a elaborar um exercício com os alunos de 1º ano de Arquitetura do Técnico de Lisboa para pensar a composição e disposição de corpos no espaço urbano através do desenho. Utilizando a locomoção, pausas e várias dinâmicas para progredir no espaço, o grupos foi desafiados a desenvolver uma consciência do corpo como unidade de algo maior, incluindo os elementos externos à atividade.</p>
+                                    <p>A convite de Fernanda Fragateiro, fomos desafiados a elaborar um exercício com os alunos de 1º ano de Arquitetura do Técnico de Lisboa para pensar a composição e disposição de corpos no espaço urbano através do desenho. Utilizando a locomoção, pausas e várias dinâmicas para progredir no espaço, o grupo foi desafiado a desenvolver uma consciência do corpo como unidade de algo maior, incluindo os elementos externos à atividade.</p>
                                 </div>
 
                                 <p class="no_space">2022</p>
@@ -194,7 +220,7 @@
 
                                 <p class="no_space">2022</p>
                                 <p class="no_space"><small>Kafountine, Senegal</small></p>
-                                <p class="no_space"><small>Proposta para Earth School Competition, Kakolum/Archstormin</small></p>
+                                <p class="no_space"><small>Proposta para Earth School Competition, Kakolum/Archstorming</small></p>
                                 <p class="no_space"><small>Hugo Lopes, Joey Boettger</small></p>
                             </div>
                             <p>&nbsp;</p>
@@ -538,33 +564,7 @@
                     <!-- /AH LIXO, LIXO -->
 
                 </div>
-                <!-- PROJETOS -->
-
-                <!-- SERVIÇOS -->
-                <div class="full_page main hidden" id="servicos_div">
-                    <p class="underlined" style="font-size: 20px;"><b>+ Projeto</b></p>
-                    <p>Estamos disponíveis para trabalhar e colaborar em projetos na área de arquitetura, urbanismo, design participativo, instalações, objetos de cenografia, design de produto etc</p>
-                    
-                    <p class="underlined" style="font-size: 20px;"><b>+ Laboratório Arrezima</b></p>
-                    <p>A Arrezima é um lugar em construção e por isso requer da presença de pessoas para que a sua existência no tempo seja materializada. Entre giestais e eucaliptais, “e vida e encostas que se transformavam em matas de carvalhos e sobreiros”, este é um lugar pseudo-autóctone. ‘Autóctone’ porque por fatores naturais foi plantado na encosta por pessoas oriundas de outros lugares (e por isso existe de e com outros lugares); ‘pseudo’ porque continua a questionar a sua condição de lugar.</p>
-                    <p>A Arrezima oferece condições de vida silenciosa e resiliente para residências individuais ou coletivas e espaço de trabalho para desenvolvimento de projetos práticos e/ou de pesquisa.</p>
-                    <p>Espaços disponíveis:</p>
-                    <p style="padding-bottom: 0px; margin-bottom: 0px;">&emsp; - Oficina e espaço para ideias materializar</p>
-                    <p style="padding-bottom: 0px; margin-bottom: 0px;">&emsp; - Horta para plantar</p>
-                    <p style="padding-bottom: 0px; margin-bottom: 0px;">&emsp; - Biblioteca para ler e investigar</p>
-                    <p style="padding-bottom: 0px; margin-bottom: 0px;">&emsp; - Cozinha para cozinhar</p>
-                    <p style="padding-bottom: 0px; margin-bottom: 0px;">&emsp; - Camas para descansar</p>
-                </div>
-                <!-- /SERVIÇOS -->
-
-                <!-- INVENTÁRIO -->
-                <div class="full_page main hidden" id="inventario_div">
-                    <div class="row" id="store" style="text-align: center;">
-
-                    </div>
-                    <p style="margin-top: 50px; padding-top: 20px; margin-left: 0px; margin-bottom: 0px; text-align: center;"><b>Para mais informações contactar <span class="text-underlined">geral@umpatamar.com</span></b></p>
-                </div>
-                <!-- /INVENTÁRIO -->
+                <!-- PROJETOS -->                
 
                 <!-- COLABORADORES -->
                 <div class="full_page main hidden" id="colaboradores_div">
@@ -573,8 +573,11 @@
                     
                     <p class="colaboradores" id="silveira">António Silveira, <small>professor</small></p>
                     <p class="colaboradores" id="danilea_doe">Daniela Doe, <small>designer</small></p>
+                    <p class="colaboradores" id="david_moreira">David Moreira, <small>músico</small></p>
                     <p class="colaboradores" id="goncalo_leal">Gonçalo Leal, <small>programador</small></p>
                     <p class="colaboradores" id="hugo_lopes">Hugo Lopes, <small>arquiteto</small></p>
+                    <p class="colaboradores" id="joao_gama">João Gama, <small>artista</small></p>
+                    <p class="colaboradores" id="joao_simples">João Simples, <small>jardineiro</small></p>
                     <p class="colaboradores" id="lara_lopes">Lara Lopes, <small>designer</small></p>
                     <p class="colaboradores" id="margarida_pereira">Margarida Pereira, <small>professora</small></p>
                     <p class="colaboradores" id="maria_abrantes">Maria Abrantes, <small>performer e ilustradora</small></p>
