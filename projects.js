@@ -101,6 +101,21 @@ var project_images = {
     ]
 };
 
+var projects_images_hover = {
+    "boussana": "images/projects/boussana/boussana_hover.jpg",
+    "calque_folhas": "images/projects/calque_folhas/calque_folhas_hover.JPG",
+    "casa_burro_cabras": "images/projects/casa_burro_cabras/casa_burro_cabras_hover.jpg",
+    "chaleira_compostagem": "images/projects/chaleira_compostagem/chaleira_compostagem_hover.jpg",
+    "corpos_alameda": "images/projects/corpos_alameda/corpos_alameda_hover.jpeg",
+    "ferro_novo": "images/projects/ferro_novo/ferro_novo_hover.jpg",
+    "grade_viva": "images/projects/grade_viva/grade_viva_hover.jpg",
+    "lixo_lixo": "images/projects/lixo_lixo/lixo_lixo_hover.jpg",
+    "ovos": "images/projects/ovos/ovos_hover.jpg",
+    "plataforma": "images/projects/plataforma/plataforma_hover.jpg",
+    "respiga": "images/projects/respiga/respiga_hover.jpg", 
+    "suporte_portatil": "images/projects/suporte_portatil/suporte_portatil_hover.jpg"
+};
+
 $(".projeto_btn.back").click(function(event) {
     var project = event.target.id.replace("_back", "");
     console.log(project);
@@ -138,3 +153,14 @@ $(".projeto_btn.forward").click(function(event) {
         img_holder.attr("src", project_images[project][next_index]);
     }
 });
+
+function projects_hover(project) {
+    var img_holder = $("#projects_hover");
+    img_holder.attr("src", projects_images_hover[project]);
+    img_holder.removeClass("hidden");
+}
+
+function projects_unhover() {
+    var img_holder = $("#projects_hover");
+    img_holder.addClass("hidden");
+}

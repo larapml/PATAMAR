@@ -87,6 +87,8 @@ function submenu_click(subsection, section) {
     });
 
     $("#"+subsection+"_div").removeClass('hidden');
+
+    
 }
 
 function toogle_submenu(section) {

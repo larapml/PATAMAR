@@ -136,6 +136,14 @@ li.menu span:hover {
     margin-right: 4%;
 }
 
+.projects_hover {
+    width: 70%;
+}
+
+.projetos_section > p:first-child {
+    margin-right: 0%;
+}
+
 .titulos {
     font-family: 'Courier Prime', monospace;
     margin: 15%;

@@ -39,9 +39,11 @@
                             <div class="hidden submenu" id="sobre_submenu"></div>
                         </li>
                         <li id="servicos_menu" class="menu">
-                            <p><span onclick="menu_click('servicos')">SERVIÇOS</span><span style="text-decoration: none; padding-left: 10px;" onclick="toogle_submenu('servicos')"><i class="fa fa-angle-down" id="servicos_angle"></i></span></p>
+                            <p><span onclick="menu_click('servicos');submenu_click('colaboracao', 'servicos')">SERVIÇOS</span><span style="text-decoration: none; padding-left: 10px;" onclick="toogle_submenu('servicos')"><i class="fa fa-angle-down" id="servicos_angle"></i></span></p>
                             <div class="hidden submenu" id="servicos_submenu">
-                                <p id="inventario" class="servicos_submenu submenu" style="margin-top: 10px;" onclick="submenu_click('inventario', 'servicos')"><small>Inventário</small></p>
+                                <p id="colaboracao" class="servicos_submenu submenu" style="margin-top: 10px;" onclick="submenu_click('colaboracao', 'servicos')"><small>Colaboração</small></p>
+                                <p id="laboratorio" class="servicos_submenu submenu" style="margin-top: 10px;" onclick="submenu_click('laboratorio', 'servicos')"><small>Laboratório Arrezima</small></p>
+                                <p id="inventario" class="servicos_submenu submenu" style="margin-top: 10px;" onclick="submenu_click('inventario', 'servicos')"><small>Produção</small></p>
                             </div>
                         </li>
                         <li id="projetos_menu" class="menu">
@@ -97,10 +99,15 @@
                 <!-- /SOBRE -->
 
                 <!-- SERVIÇOS -->
-                <div class="full_page main hidden" id="servicos_div">
+                <!-- COLABORAÇÃO -->
+                <div class="full_page main hidden" id="colaboracao_div">
                     <p class="underlined" style="font-size: 20px;"><b>+ Projeto</b></p>
                     <p>Estamos disponíveis para trabalhar e colaborar em projetos na área de arquitetura, design participativo, instalações, objetos de cenografia, design de produto, etc</p>
-                    
+                </div>
+                <!-- /COLABORAÇÃO -->
+
+                <!-- LABORATÓRIO -->
+                <div class="full_page main hidden" id="laboratorio_div">
                     <p class="underlined" style="font-size: 20px;"><b>+ Laboratório Arrezima</b></p>
                     <p>A Arrezima é um lugar em construção e por isso requer da presença de pessoas para que a sua existência no tempo seja materializada. Entre giestais e eucaliptais, “e vida e encostas que se transformavam em matas de carvalhos e sobreiros”, este é um lugar pseudo-autóctone. ‘Autóctone’ porque por fatores naturais foi plantado na encosta por pessoas oriundas de outros lugares (e por isso existe de e com outros lugares); ‘pseudo’ porque continua a questionar a sua condição de lugar.</p>
                     <p>A Arrezima oferece condições de vida silenciosa e resiliente para residências individuais ou coletivas e espaço de trabalho para desenvolvimento de projetos práticos e/ou de pesquisa.</p>
@@ -111,457 +118,465 @@
                     <p style="padding-bottom: 0px; margin-bottom: 0px;">&emsp; - Cozinha para cozinhar</p>
                     <p style="padding-bottom: 0px; margin-bottom: 0px;">&emsp; - Camas para descansar</p>
                 </div>
-                <!-- /SERVIÇOS -->
-
-                <!-- INVENTÁRIO -->
+                <!-- /LABORATÓRIO -->
+                
+                <!-- PRODUÇÃO -->
                 <div class="full_page sub hidden" id="inventario_div">
-                    <div class="row" id="store" style="text-align: center;">
-
+                    <div class="row" id="store" style="text-align: center; margin-bottom: 20px;">
+                        
                     </div>
-                    <div style="position: absolute; bottom: 0px; width: 95%;">
+                    <div style="margin-top: 30px;">
                         <p style="text-align: center; margin-left: 0px; margin-right: 30%;"><small><b>Para mais informações contactar <span class="text-underlined">geral@umpatamar.com</span></b></small></p>
                     </div>
                 </div>
-                <!-- /INVENTÁRIO -->
+                <!-- /PRODUÇÃO -->
+                <!-- /SERVIÇOS -->
 
                 <!-- PROJETOS -->
                 <div class="full_page hidden main" id="projetos_div">
 
-                    <!-- CORPOS NA ALAMEDA -->
-                    <section id="corpos_alameda_section" class="projetos_section">
-                        <p id="corpos_alameda_menu" class="lista no_space projetos" onclick="projects_click('corpos_alameda')"> 
-                            <span>Corpos na Alameda</span> <small>Oficina</small>
-                        </p>
-                        <div class="hidden projeto_sobre" id="corpos_alameda_div">
-                            <!--IMAGENS-->
-                            <div class="row">
-                                <div class="col-3" style="margin: auto; text-align: right;">
-                                    <button class="projeto_btn back" id="corpos_alameda_back"><</button>
-                                </div>
-                                <div class="col-6" style="text-align: center;">
-                                    <img class="projeto_img" id="corpos_alameda_img" src="images/projects/corpos_alameda/corpos_alameda_1.jpg" alt="">
-                                </div>
-                                <div class="col-3" style="margin: auto; text-align: left;">
-                                    <button class="projeto_btn forward" id="corpos_alameda_forward">></button>
-                                </div>
-                            </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-8">                        
+                            <!-- CORPOS NA ALAMEDA -->
+                            <section id="corpos_alameda_section" class="projetos_section">
+                                <p id="corpos_alameda_menu" class="lista no_space projetos" onclick="projects_click('corpos_alameda')" onmouseover="projects_hover('corpos_alameda')" onmouseout="projects_unhover()"> 
+                                    <span>Corpos na Alameda</span> <small>Oficina</small>
+                                </p>
+                                <div class="hidden projeto_sobre" id="corpos_alameda_div">
+                                    <!--IMAGENS-->
+                                    <div class="row">
+                                        <div class="col-3" style="margin: auto; text-align: right;">
+                                            <button class="projeto_btn back" id="corpos_alameda_back"><</button>
+                                        </div>
+                                        <div class="col-6" style="text-align: center;">
+                                            <img class="projeto_img" id="corpos_alameda_img" src="images/projects/corpos_alameda/corpos_alameda_1.jpg" alt="">
+                                        </div>
+                                        <div class="col-3" style="margin: auto; text-align: left;">
+                                            <button class="projeto_btn forward" id="corpos_alameda_forward">></button>
+                                        </div>
+                                    </div>
 
-                            <div class="info_text">
-                                <div>
-                                    <p>A convite de Fernanda Fragateiro, fomos desafiados a elaborar um exercício com os alunos de 1º ano de Arquitetura do Técnico de Lisboa para pensar a composição e disposição de corpos no espaço urbano através do desenho. Utilizando a locomoção, pausas e várias dinâmicas para progredir no espaço, o grupo foi desafiado a desenvolver uma consciência do corpo como unidade de algo maior, incluindo os elementos externos à atividade.</p>
-                                </div>
+                                    <div class="info_text">
+                                        <div>
+                                            <p>A convite de Fernanda Fragateiro, fomos desafiados a elaborar um exercício com os alunos de 1º ano de Arquitetura do Técnico de Lisboa para pensar a composição e disposição de corpos no espaço urbano através do desenho. Utilizando a locomoção, pausas e várias dinâmicas para progredir no espaço, o grupo foi desafiado a desenvolver uma consciência do corpo como unidade de algo maior, incluindo os elementos externos à atividade.</p>
+                                        </div>
 
-                                <p class="no_space">2022</p>
-                                <p class="no_space"><small>Técnico Lisboa, Alameda</small></p>
-                                <p class="no_space"><small>Hugo Lopes, Maria Abrantes</small></p>
-                            </div>
-                            <p>&nbsp;</p>
+                                        <p class="no_space">2022</p>
+                                        <p class="no_space"><small>Técnico Lisboa, Alameda</small></p>
+                                        <p class="no_space"><small>Hugo Lopes, Maria Abrantes</small></p>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </section>
+                            <!-- /CORPOS NA ALAMEDA -->
+
+                            <!-- GRADE VIVA -->
+                            <section id="grade_viva_section" class="projetos_section">
+                                <p id="grade_viva_menu" class="lista no_space projetos" onclick="projects_click('grade_viva')" onmouseover="projects_hover('grade_viva')" onmouseout="projects_unhover()"> 
+                                    <span>Grade Viva</span> <small>Em Construção, Urbanismo</small>
+                                </p>
+                                <div class="hidden projeto_sobre" id="grade_viva_div">
+                                    <!--IMAGENS-->
+                                    <div class="row">
+                                        <div class="col-3" style="margin: auto; text-align: right;">
+                                            <button class="projeto_btn back" id="grade_viva_back"><</button>
+                                        </div>
+                                        <div class="col-6" style="text-align: center;">
+                                            <img class="projeto_img" id="grade_viva_img" src="images/projects/grade_viva/grade_viva_1.jpg" alt="">
+                                        </div>
+                                        <div class="col-3" style="margin: auto; text-align: left;">
+                                            <button class="projeto_btn forward" id="grade_viva_forward">></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="info_text">
+                                        <div>
+                                            <p>Para a consolidação de dois taludes optamos por explorar técnicas de engenharia natural, ao invés dos metódos de engenharia cívil tradicionais. Esta obra teve a consultadoria da Ecosalix.</p>
+                                        </div>
+
+                                        <p class="no_space">2022</p>
+                                        <p class="no_space"><small>Arrezima</small></p>
+                                        <p class="no_space"><small>António Silveira, Gonçalo Leal, Hugo Lopes, Valdemar Lopes</small></p>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </section>
+                            <!-- /GRADE VIVA -->
+
+                            <!-- BOUSSANA SCHOOL -->
+                            <section id="boussana_section" class="projetos_section">
+                                <p id="boussana_menu" class="lista no_space projetos" onclick="projects_click('boussana')" onmouseover="projects_hover('boussana')" onmouseout="projects_unhover()"> 
+                                    <span>Boussana School</span> <small>Concurso, Arquitetura</small>
+                                </p>
+                                <div class="hidden projeto_sobre" id="boussana_div">
+                                    <div class="row">
+                                        <div class="col-3" style="margin: auto; text-align: right;">
+                                            <button class="projeto_btn" id="boussana_back"><i class="fa-solid fa-angle-left"></i></button>
+                                        </div>
+                                        <div class="col-6" style="text-align: center;">
+                                            <img class="projeto_img" id="boussana_img" src="images/projects/boussana/boussana_1.png" alt="">
+                                        </div>
+                                        <div class="col-3" style="margin: auto; text-align: left;">
+                                            <button class="projeto_btn" id="boussana_forward"><i class="fa-solid fa-angle-right"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="info_text">
+                                        <div>
+                                            <p>Imaginamos uma escola secundária como uma configuração de módulos numa integração holística com todos os elementos da paisagem. Propomos um método construtivo flexível para atender não apenas a crescente necessidade de escolarização na área, mas também para futuras construções na região.</p>
+                                            <p>Propomos a introdução de um 'módulo de duas salas' que se repete ao longo de todo o esquema, de acordo com as fases de construção da escola. Este módulo consiste em duas salas retangulares que pivotam 20º graus uma sobre a outra. Essa pivotação cria um recanto entre as salas de aula, criando uma área sombreada, incentivando os alunos a comunicação entre os alunos antes e depois das aulas.</p>
+                                            <p>Identificamos o caminho norte-sul existente no terreno e o entrelaçamos com o pátio da escola. Enquanto a entrada norte é mais discreta para protegê-la da estrada de terra que percorre o lado norte do terreno, a entrada sul da escola é mais larga, pois é sequenciada pelo pátio coberto. É por esta entrada que ambos os pátios se conectam e que a escola se abre para a horta comunitária. </p>
+                                        </div>
+
+                                        <p class="no_space">2022</p>
+                                        <p class="no_space"><small>Kafountine, Senegal</small></p>
+                                        <p class="no_space"><small>Proposta para Earth School Competition, Kakolum/Archstorming</small></p>
+                                        <p class="no_space"><small>Hugo Lopes, Joey Boettger</small></p>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </section>
+                            <!-- /BOUSSANA SCHOOL -->
+
+                            <!-- O SOL ADORMECIDO -->
+                            <section id="sol_adormecido_section" class="projetos_section">
+                                <p id="sol_adormecido_menu" class="lista no_space projetos" onclick="projects_click('sol_adormecido')" onmouseover="projects_hover('sol_adormecido')" onmouseout="projects_unhover()"> 
+                                    <span>O Sol Adormecido</span> <small>Concurso, Instalação</small>
+                                </p>
+                                <div class="hidden projeto_sobre" id="sol_adormecido_div">
+                                    <!--IMAGENS-->
+                                    <div class="row">
+                                        <div class="col-3" style="margin: auto; text-align: right;">
+                                            <button class="projeto_btn back" id="sol_adormecido_back"><</button>
+                                        </div>
+                                        <div class="col-6" style="text-align: center;">
+                                            <img class="projeto_img" id="sol_adormecido_img" src="images/projects/sol_adormecido/sol_adormecido_1.jpg" alt="">
+                                        </div>
+                                        <div class="col-3" style="margin: auto; text-align: left;">
+                                            <button class="projeto_btn forward" id="sol_adormecido_forward">></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="info_text">
+                                        <div>
+                                            <p>O Sol Adormecido introduz uma nova coreografia no espaço, reforçando a natureza intersticial do pátio. A instalação introduz o lúdico como ferramenta analítica de envolvimento com o local, permitindo a ativação de pequenas narrativas decorrentes da vida cotidiana.</p>
+                                            <p>Para intervir no local, foi identificado um vocabulário de formas através da análise de elementos arquitetônicos existentes no local. Como uma extensão da rua para o pátio, a instalação torna-se uma interface entre o público e o privado. </p>
+                                            <p>Assim, as arcadas que compõem a fachada e o arco interno que atua como comunicador entre os pátios tornam-se elementos integrantes de uma composição efêmera que transforma a vivência do lugar ao expandir do domínio público para o pátio. </p>
+                                            <p>Na entrada, a arcada da fachada inclinada joga com o deslocamento do elemento arquitetônico para criar novas narrativas e relações com a rua e os pedestres. O elemento destacado atua também como prelúdio ou convite para entrar no pátio e vivenciar o segundo elemento da intervenção. Dentro do pátio, um palco para a vida quotidiana e encontros comunitários é montado girando a forma negativa/interna do arco sobre o chão.</p>
+                                        </div>
+
+                                        <p class="no_space">2022</p>
+                                        <p class="no_space"><small>Calle Obispo Bustamante, Logroño</small></p>
+                                        <p class="no_space"><small>Proposta para Concéntrico 08 - Logroño International Festival of Architecture and Design</small></p>                                
+                                        <p class="no_space"><small>Hugo Lopes, Miguel Teodoro</small></p>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </section>
+                            <!-- /O SOL ADORMECIDO -->
+
+                            <!-- A RESPIGA DAS PEDRAS -->
+                            <section id="respiga_section" class="projetos_section">
+                                <p id="respiga_menu" class="lista no_space projetos" onclick="projects_click('respiga')" onmouseover="projects_hover('respiga')" onmouseout="projects_unhover()">
+                                    <span>A Respiga das Pedras</span> <small>Urbanismo</small>
+                                </p>
+                                <div class="hidden projeto_sobre" id="respiga_div">
+                                    <!--IMAGENS-->
+                                    <div class="row">
+                                        <div class="col-3" style="margin: auto; text-align: right;">
+                                            <button class="projeto_btn back" id="respiga_back"><</button>
+                                        </div>
+                                        <div class="col-6" style="text-align: center;">
+                                            <img class="projeto_img" id="respiga_img" src="images/projects/respiga/respiga_1.JPG" alt="">
+                                        </div>
+                                        <div class="col-3" style="margin: auto; text-align: left;">
+                                            <button class="projeto_btn forward" id="respiga_forward">></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="info_text">
+                                        <div>
+                                            <p>Como os respigadores e respigadoras de Agnès Varda, também respigamos as pedras à volta do terreno. O processo da respiga da pedra uma a uma, foi longo mas profícuo. No caminho das pedras respigadas inscrevemos um código.</p>
+                                        </div>
+
+                                        <p class="no_space">2020</p>
+                                        <p class="no_space"><small>Arrezima</small></p>
+                                        <p class="no_space"><small>David Monteiro, Eduardo Pereira, Helena Pereira, Hugo Lopes, João Gama, Valdemar Lopes</small></p>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </section>
+                            <!-- /A RESPIGA DAS PEDRAS -->
+
+                            <!-- CHALEIRA DE COMPOSTAGEM -->
+                            <section id="chaleira_compostagem_section" class="projetos_section">
+                                <p id="chaleira_compostagem_menu" class="lista no_space projetos" onclick="projects_click('chaleira_compostagem')" onmouseover="projects_hover('chaleira_compostagem')" onmouseout="projects_unhover()">
+                                    <span>Chaleira de Compostagem</span> <small>Design</small>
+                                </p>
+                                <div class="hidden projeto_sobre" id="chaleira_compostagem_div">
+                                    <!--IMAGENS-->
+                                    <div class="row">
+                                        <div class="col-3" style="margin: auto; text-align: right;">
+                                            <button class="projeto_btn back" id="chaleira_compostagem_back"><</button>
+                                        </div>
+                                        <div class="col-6" style="text-align: center;">
+                                            <img class="projeto_img" id="chaleira_compostagem_img" src="images/projects/chaleira_compostagem/chaleira_compostagem_1.jpg" alt="">
+                                        </div>
+                                        <div class="col-3" style="margin: auto; text-align: left;">
+                                            <button class="projeto_btn forward" id="chaleira_compostagem_forward">></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="info_text">
+                                        <div>
+                                            <p></p>
+                                        </div>
+
+                                        <p class="no_space">2020</p>
+                                        <p class="no_space"><small>Arrezima</small></p>
+                                        <p class="no_space"><small>Hugo Lopes, Margarida Pereira, Valdemar Lopes</small></p>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </section>
+                            <!-- /CHALEIRA DE COMPOSTAGEM -->
+
+                            <!-- CASA PARA UM BURRO E DUAS CABRAS -->
+                            <section id="casa_burro_cabras_section" class="projetos_section">
+                                <p id="casa_burro_cabras_menu" class="lista no_space projetos" onclick="projects_click('casa_burro_cabras')" onmouseover="projects_hover('casa_burro_cabras')" onmouseout="projects_unhover()">
+                                    <span>Casa para um Burro e duas Cabras</span> <small>Arquitetura</small>
+                                </p>
+                                <div class="hidden projeto_sobre" id="casa_burro_cabras_div">
+                                    <!--IMAGENS-->
+                                    <div class="row">
+                                        <div class="col-3" style="margin: auto; text-align: right;">
+                                            <button class="projeto_btn back" id="casa_burro_cabras_back"><</button>
+                                        </div>
+                                        <div class="col-6" style="text-align: center;">
+                                            <img class="projeto_img" id="casa_burro_cabras_img" src="images/projects/casa_burro_cabras/casa_burro_cabras_1.jpg" alt="">
+                                        </div>
+                                        <div class="col-3" style="margin: auto; text-align: left;">
+                                            <button class="projeto_btn forward" id="casa_burro_cabras_forward">></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="info_text">
+                                        <div>
+                                            <p></p>
+                                        </div>
+
+                                        <p class="no_space">2020</p>
+                                        <p class="no_space"><small>Arrezima</small></p>
+                                        <p class="no_space"><small>Hugo Lopes</small></p>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </section>
+                            <!-- /CASA PARA UM BURRO E DUAS CABRAS -->
+
+                            <!-- O CALQUE DAS FOLHAS -->
+                            <section id="calque_folhas_section" class="projetos_section">
+                                <p id="calque_folhas_menu" class="lista no_space projetos" onclick="projects_click('calque_folhas')" onmouseover="projects_hover('calque_folhas')" onmouseout="projects_unhover()"> 
+                                    <span>O Calque das Folhas</span> <small>Oficina</small>
+                                </p>
+                                <div class="hidden projeto_sobre" id="calque_folhas_div">
+                                    <!--IMAGENS-->
+                                    <div class="row">
+                                        <div class="col-3" style="margin: auto; text-align: right;">
+                                            <button class="projeto_btn back" id="calque_folhas_back"><</button>
+                                        </div>
+                                        <div class="col-6" style="text-align: center;">
+                                            <img class="projeto_img" id="calque_folhas_img" src="images/projects/calque_folhas/calque_folhas_1.JPG" alt="">
+                                        </div>
+                                        <div class="col-3" style="margin: auto; text-align: left;">
+                                            <button class="projeto_btn forward" id="calque_folhas_forward">></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="info_text">
+                                        <div>
+                                            <p>Produção de sacos com tingimento natural.</p>
+                                        </div>
+
+                                        <p class="no_space">2020</p>
+                                        <p class="no_space"><small>Arrezima</small></p>
+                                        <p class="no_space"><small>Ana Doe, Daniela Doe, Margarida Pereira, Valdemar Lopes</small></p>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </section>
+                            <!-- /O CALQUE DAS FOLHAS -->
+
+                            <!-- SUPORTE-PORTÁTIL -->
+                            <section id="suporte_portatil_section" class="projetos_section">
+                                <p id="suporte_portatil_menu" class="lista no_space projetos" onclick="projects_click('suporte_portatil')" onmouseover="projects_hover('suporte_portatil')" onmouseout="projects_unhover()">                     
+                                    <span>Suporte-Portátil</span> <small>Design</small>
+                                </p>
+                                <div class="hidden projeto_sobre" id="suporte_portatil_div">
+                                    <!--IMAGENS-->
+                                    <div class="row">
+                                        <div class="col-3" style="margin: auto; text-align: right;">
+                                            <button class="projeto_btn back" id="suporte_portatil_back"><</button>
+                                        </div>
+                                        <div class="col-6" style="text-align: center;">
+                                            <img class="projeto_img" id="suporte_portatil_img" src="images/projects/suporte_portatil/suporte_portatil_1.jpg" alt="">
+                                        </div>
+                                        <div class="col-3" style="margin: auto; text-align: left;">
+                                            <button class="projeto_btn forward" id="suporte_portatil_forward">></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="info_text">
+                                        <div>
+                                            <p>Molde de três peças em mdf 18mm.</p>
+                                        </div>
+
+                                        <p class="no_space">2020</p>
+                                        <p class="no_space"><small>Arrezima</small></p>
+                                        <p class="no_space"><small>Hugo Lopes</small></p>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </section>
+                            <!-- /SUPORTE-PORTÁTIL -->
+
+                            <!-- UMA ESCULTURA PARA PÔR OVOS -->
+                            <section id="ovos_section" class="projetos_section">
+                                <p id="ovos_menu" class="lista no_space projetos" onclick="projects_click('ovos')" onmouseover="projects_hover('ovos')" onmouseout="projects_unhover()"> 
+                                    <span>Uma Escultura Para Pôr Ovos</span> <small>Arquitetura</small>
+                                </p>
+                                <div class="hidden projeto_sobre" id="ovos_div">
+                                    <!--IMAGENS-->
+                                    <div class="row">
+                                        <div class="col-3" style="margin: auto; text-align: right;">
+                                            <button class="projeto_btn back" id="ovos_back"><</button>
+                                        </div>
+                                        <div class="col-6" style="text-align: center;">
+                                            <img class="projeto_img" id="ovos_img" src="images/projects/ovos/ovos_0.jpg" alt="">
+                                        </div>
+                                        <div class="col-3" style="margin: auto; text-align: left;">
+                                            <button class="projeto_btn forward" id="ovos_forward">></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="info_text">
+                                        <div>
+                                            <p>Até à construção da Casa do Burro e dos Três Cabras, foi projectada uma estrutura temporária para as galinhas, com o intuito de testar as canas bravas como material adequado para a construção de divisórias e fachadas.</p>
+                                            <p>A Escultura para Pôr Ovos é um galinheiro modular, construído com materiais simples: ripas de pinho para a estrutura, madeira recuperada, canas para as zonas fechadas e poleiros e chapa de metal corrugado. O interior é ventilado e permite que a luz natural do dia seja filtrada. A abertura traseira permite a recolha dos ovos.</p>
+                                        </div>
+
+                                        <p class="no_space">2020</p>
+                                        <p class="no_space"><small>Arrezima</small></p>
+                                        <p class="no_space"><small>Hugo Lopes, Valdemar Lopes</small></p>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </section>
+                            <!-- /UMA ESCULTURA PARA PÔR OVOS -->
+
+                            <!-- UMA PLATAFORMA ENTRE DOIS EUCALIPTOS -->
+                            <section id="plataforma_section" class="projetos_section">
+                                <p id="plataforma_menu" class="lista no_space projetos" onclick="projects_click('plataforma')" onmouseover="projects_hover('plataforma')" onmouseout="projects_unhover()"> 
+                                    <span>Uma Plataforma entre Dois Eucaliptos</span> <small>Oficina</small>
+                                </p>
+                                <div class="hidden projeto_sobre" id="plataforma_div">
+                                    <!--IMAGENS-->
+                                    <div class="row">
+                                        <div class="col-3" style="margin: auto; text-align: right;">
+                                            <button class="projeto_btn back" id="plataforma_back"><</button>
+                                        </div>
+                                        <div class="col-6" style="text-align: center;">
+                                            <img class="projeto_img" id="plataforma_img" src="images/projects/plataforma/plataforma_1.jpg" alt="">
+                                        </div>
+                                        <div class="col-3" style="margin: auto; text-align: left;">
+                                            <button class="projeto_btn forward" id="plataforma_forward">></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="info_text">
+                                        <div>
+                                            <p></p>
+                                        </div>
+
+                                        <p class="no_space">2020</p>
+                                        <p class="no_space"><small>Arrezima</small></p>
+                                        <p class="no_space"><small>Hugo Lopes, Lara Lopes, Valdemar Lopes</small></p>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </section>
+                            <!-- /UMA PLATAFORMA ENTRE DOIS EUCALIPTOS -->
+
+                            <!-- FERRO NOVO -->
+                            <section id="ferro_novo_section" class="projetos_section">
+                                <p id="ferro_novo_menu" class="lista no_space projetos" onclick="projects_click('ferro_novo')" onmouseover="projects_hover('ferro_novo')" onmouseout="projects_unhover()"> 
+                                    <span>Ferro Novo</span> <small>Oficina</small>
+                                </p>
+                                <div class="hidden projeto_sobre" id="ferro_novo_div">
+                                    <!--IMAGENS-->
+                                    <div class="row">
+                                        <div class="col-3" style="margin: auto; text-align: right;">
+                                            <button class="projeto_btn back" id="ferro_novo_back"><</button>
+                                        </div>
+                                        <div class="col-6" style="text-align: center;">
+                                            <img class="projeto_img" id="ferro_novo_img" src="images/projects/ferro_novo/ferro_novo_1.jpg" alt="">
+                                        </div>
+                                        <div class="col-3" style="margin: auto; text-align: left;">
+                                            <button class="projeto_btn forward" id="ferro_novo_forward">></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="info_text">
+                                        <div>
+                                            <p></p>
+                                        </div>
+
+                                        <p class="no_space">2020</p>
+                                        <p class="no_space"><small>Arrezima</small></p>
+                                        <p class="no_space"><small>António Silveira, Hugo Lopes, Valdemar Lopes</small></p>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </section>
+                            <!-- /FERRO NOVO -->
+
+                            <!-- AH LIXO, LIXO -->
+                            <section id="lixo_lixo_section" class="projetos_section">
+                                <p id="lixo_lixo_menu" class="lista no_space projetos" onclick="projects_click('lixo_lixo')" onmouseover="projects_hover('lixo_lixo')" onmouseout="projects_unhover()"> 
+                                    <span>Ah lixo, lixo</span> <small>Design</small>
+                                </p>
+                                <div class="hidden projeto_sobre" id="lixo_lixo_div">
+                                    <!--IMAGENS-->
+                                    <div class="row">
+                                        <div class="col-3" style="margin: auto; text-align: right;">
+                                            <button class="projeto_btn back" id="lixo_lixo_back"><</button>
+                                        </div>
+                                        <div class="col-6" style="text-align: center;">
+                                            <img class="projeto_img" id="lixo_lixo_img" src="images/projects/lixo_lixo/lixo_lixo_1.jpg" alt="">
+                                        </div>
+                                        <div class="col-3" style="margin: auto; text-align: left;">
+                                            <button class="projeto_btn forward" id="lixo_lixo_forward">></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="info_text">
+                                        <div>
+                                            <p></p>
+                                        </div>
+
+                                        <p class="no_space">2020</p>
+                                        <p class="no_space"><small>Arrezima</small></p>
+                                        <p class="no_space"><small>Hugo Lopes, Valdemar Lopes</small></p>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </section>
+                            <!-- /AH LIXO, LIXO -->
                         </div>
-                    </section>
-                    <!-- /CORPOS NA ALAMEDA -->
-
-                    <!-- GRADE VIVA -->
-                    <section id="grade_viva_section" class="projetos_section">
-                        <p id="grade_viva_menu" class="lista no_space projetos" onclick="projects_click('grade_viva')"> 
-                            <span>Grade Viva</span> <small>Em Construção, Urbanismo</small>
-                        </p>
-                        <div class="hidden projeto_sobre" id="grade_viva_div">
-                            <!--IMAGENS-->
-                            <div class="row">
-                                <div class="col-3" style="margin: auto; text-align: right;">
-                                    <button class="projeto_btn back" id="grade_viva_back"><</button>
-                                </div>
-                                <div class="col-6" style="text-align: center;">
-                                    <img class="projeto_img" id="grade_viva_img" src="images/projects/grade_viva/grade_viva_1.jpg" alt="">
-                                </div>
-                                <div class="col-3" style="margin: auto; text-align: left;">
-                                    <button class="projeto_btn forward" id="grade_viva_forward">></button>
-                                </div>
-                            </div>
-
-                            <div class="info_text">
-                                <div>
-                                    <p>Para a consolidação de dois taludes optamos por explorar técnicas de engenharia natural, ao invés dos metódos de engenharia cívil tradicionais. Esta obra teve a consultadoria da Ecosalix.</p>
-                                </div>
-
-                                <p class="no_space">2022</p>
-                                <p class="no_space"><small>Arrezima</small></p>
-                                <p class="no_space"><small>António Silveira, Gonçalo Leal, Hugo Lopes, Valdemar Lopes</small></p>
-                            </div>
-                            <p>&nbsp;</p>
+                        <div class="col-0 col-sm-4">
+                            <img id="projects_hover" class="projects_hover hidden" src="" alt="">
                         </div>
-                    </section>
-                    <!-- /GRADE VIVA -->
-
-                    <!-- BOUSSANA SCHOOL -->
-                    <section id="boussana_section" class="projetos_section">
-                        <p id="boussana_menu" class="lista no_space projetos" onclick="projects_click('boussana')"> 
-                            <span>Boussana School</span> <small>Concurso, Arquitetura</small>
-                        </p>
-                        <div class="hidden projeto_sobre" id="boussana_div">
-                            <div class="row">
-                                <div class="col-3" style="margin: auto; text-align: right;">
-                                    <button class="projeto_btn" id="boussana_back"><i class="fa-solid fa-angle-left"></i></button>
-                                </div>
-                                <div class="col-6" style="text-align: center;">
-                                    <img class="projeto_img" id="boussana_img" src="images/projects/boussana/boussana_1.png" alt="">
-                                </div>
-                                <div class="col-3" style="margin: auto; text-align: left;">
-                                    <button class="projeto_btn" id="boussana_forward"><i class="fa-solid fa-angle-right"></i></button>
-                                </div>
-                            </div>
-
-                            <div class="info_text">
-                                <div>
-                                    <p>Imaginamos uma escola secundária como uma configuração de módulos numa integração holística com todos os elementos da paisagem. Propomos um método construtivo flexível para atender não apenas a crescente necessidade de escolarização na área, mas também para futuras construções na região.</p>
-                                    <p>Propomos a introdução de um 'módulo de duas salas' que se repete ao longo de todo o esquema, de acordo com as fases de construção da escola. Este módulo consiste em duas salas retangulares que pivotam 20º graus uma sobre a outra. Essa pivotação cria um recanto entre as salas de aula, criando uma área sombreada, incentivando os alunos a comunicação entre os alunos antes e depois das aulas.</p>
-                                    <p>Identificamos o caminho norte-sul existente no terreno e o entrelaçamos com o pátio da escola. Enquanto a entrada norte é mais discreta para protegê-la da estrada de terra que percorre o lado norte do terreno, a entrada sul da escola é mais larga, pois é sequenciada pelo pátio coberto. É por esta entrada que ambos os pátios se conectam e que a escola se abre para a horta comunitária. </p>
-                                </div>
-
-                                <p class="no_space">2022</p>
-                                <p class="no_space"><small>Kafountine, Senegal</small></p>
-                                <p class="no_space"><small>Proposta para Earth School Competition, Kakolum/Archstorming</small></p>
-                                <p class="no_space"><small>Hugo Lopes, Joey Boettger</small></p>
-                            </div>
-                            <p>&nbsp;</p>
-                        </div>
-                    </section>
-                    <!-- /BOUSSANA SCHOOL -->
-
-                    <!-- O SOL ADORMECIDO -->
-                    <section id="sol_adormecido_section" class="projetos_section">
-                        <p id="sol_adormecido_menu" class="lista no_space projetos" onclick="projects_click('sol_adormecido')"> 
-                            <span>O Sol Adormecido</span> <small>Concurso, Instalação</small>
-                        </p>
-                        <div class="hidden projeto_sobre" id="sol_adormecido_div">
-                            <!--IMAGENS-->
-                            <div class="row">
-                                <div class="col-3" style="margin: auto; text-align: right;">
-                                    <button class="projeto_btn back" id="sol_adormecido_back"><</button>
-                                </div>
-                                <div class="col-6" style="text-align: center;">
-                                    <img class="projeto_img" id="sol_adormecido_img" src="images/projects/sol_adormecido/sol_adormecido_1.jpg" alt="">
-                                </div>
-                                <div class="col-3" style="margin: auto; text-align: left;">
-                                    <button class="projeto_btn forward" id="sol_adormecido_forward">></button>
-                                </div>
-                            </div>
-
-                            <div class="info_text">
-                                <div>
-                                    <p>O Sol Adormecido introduz uma nova coreografia no espaço, reforçando a natureza intersticial do pátio. A instalação introduz o lúdico como ferramenta analítica de envolvimento com o local, permitindo a ativação de pequenas narrativas decorrentes da vida cotidiana.</p>
-                                    <p>Para intervir no local, foi identificado um vocabulário de formas através da análise de elementos arquitetônicos existentes no local. Como uma extensão da rua para o pátio, a instalação torna-se uma interface entre o público e o privado. </p>
-                                    <p>Assim, as arcadas que compõem a fachada e o arco interno que atua como comunicador entre os pátios tornam-se elementos integrantes de uma composição efêmera que transforma a vivência do lugar ao expandir do domínio público para o pátio. </p>
-                                    <p>Na entrada, a arcada da fachada inclinada joga com o deslocamento do elemento arquitetônico para criar novas narrativas e relações com a rua e os pedestres. O elemento destacado atua também como prelúdio ou convite para entrar no pátio e vivenciar o segundo elemento da intervenção. Dentro do pátio, um palco para a vida quotidiana e encontros comunitários é montado girando a forma negativa/interna do arco sobre o chão.</p>
-                                </div>
-
-                                <p class="no_space">2022</p>
-                                <p class="no_space"><small>Calle Obispo Bustamante, Logroño</small></p>
-                                <p class="no_space"><small>Proposta para Concéntrico 08 - Logroño International Festival of Architecture and Design</small></p>                                
-                                <p class="no_space"><small>Hugo Lopes, Miguel Teodoro</small></p>
-                            </div>
-                            <p>&nbsp;</p>
-                        </div>
-                    </section>
-                    <!-- /O SOL ADORMECIDO -->
-
-                    <!-- A RESPIGA DAS PEDRAS -->
-                    <section id="respiga_section" class="projetos_section">
-                        <p id="respiga_menu" class="lista no_space projetos" onclick="projects_click('respiga')">
-                            <span>A Respiga das Pedras</span> <small>Urbanismo</small>
-                        </p>
-                        <div class="hidden projeto_sobre" id="respiga_div">
-                            <!--IMAGENS-->
-                            <div class="row">
-                                <div class="col-3" style="margin: auto; text-align: right;">
-                                    <button class="projeto_btn back" id="respiga_back"><</button>
-                                </div>
-                                <div class="col-6" style="text-align: center;">
-                                    <img class="projeto_img" id="respiga_img" src="images/projects/respiga/respiga_1.JPG" alt="">
-                                </div>
-                                <div class="col-3" style="margin: auto; text-align: left;">
-                                    <button class="projeto_btn forward" id="respiga_forward">></button>
-                                </div>
-                            </div>
-
-                            <div class="info_text">
-                                <div>
-                                    <p>Como os respigadores e respigadoras de Agnès Varda, também respigamos as pedras à volta do terreno. O processo da respiga da pedra uma a uma, foi longo mas profícuo. No caminho das pedras respigadas inscrevemos um código.</p>
-                                </div>
-
-                                <p class="no_space">2020</p>
-                                <p class="no_space"><small>Arrezima</small></p>
-                                <p class="no_space"><small>David Monteiro, Eduardo Pereira, Helena Pereira, Hugo Lopes, João Gama, Valdemar Lopes</small></p>
-                            </div>
-                            <p>&nbsp;</p>
-                        </div>
-                    </section>
-                    <!-- /A RESPIGA DAS PEDRAS -->
-
-                    <!-- CHALEIRA DE COMPOSTAGEM -->
-                    <section id="chaleira_compostagem_section" class="projetos_section">
-                        <p id="chaleira_compostagem_menu" class="lista no_space projetos" onclick="projects_click('chaleira_compostagem')">
-                            <span>Chaleira de Compostagem</span> <small>Design</small>
-                        </p>
-                        <div class="hidden projeto_sobre" id="chaleira_compostagem_div">
-                            <!--IMAGENS-->
-                            <div class="row">
-                                <div class="col-3" style="margin: auto; text-align: right;">
-                                    <button class="projeto_btn back" id="chaleira_compostagem_back"><</button>
-                                </div>
-                                <div class="col-6" style="text-align: center;">
-                                    <img class="projeto_img" id="chaleira_compostagem_img" src="images/projects/chaleira_compostagem/chaleira_compostagem_1.jpg" alt="">
-                                </div>
-                                <div class="col-3" style="margin: auto; text-align: left;">
-                                    <button class="projeto_btn forward" id="chaleira_compostagem_forward">></button>
-                                </div>
-                            </div>
-
-                            <div class="info_text">
-                                <div>
-                                    <p></p>
-                                </div>
-
-                                <p class="no_space">2020</p>
-                                <p class="no_space"><small>Arrezima</small></p>
-                                <p class="no_space"><small>Hugo Lopes, Margarida Pereira, Valdemar Lopes</small></p>
-                            </div>
-                            <p>&nbsp;</p>
-                        </div>
-                    </section>
-                    <!-- /CHALEIRA DE COMPOSTAGEM -->
-
-                    <!-- CASA PARA UM BURRO E DUAS CABRAS -->
-                    <section id="casa_burro_cabras_section" class="projetos_section">
-                        <p id="casa_burro_cabras_menu" class="lista no_space projetos" onclick="projects_click('casa_burro_cabras')">
-                            <span>Casa para um Burro e duas Cabras</span> <small>Arquitetura</small>
-                        </p>
-                        <div class="hidden projeto_sobre" id="casa_burro_cabras_div">
-                            <!--IMAGENS-->
-                            <div class="row">
-                                <div class="col-3" style="margin: auto; text-align: right;">
-                                    <button class="projeto_btn back" id="casa_burro_cabras_back"><</button>
-                                </div>
-                                <div class="col-6" style="text-align: center;">
-                                    <img class="projeto_img" id="casa_burro_cabras_img" src="images/projects/casa_burro_cabras/casa_burro_cabras_1.jpg" alt="">
-                                </div>
-                                <div class="col-3" style="margin: auto; text-align: left;">
-                                    <button class="projeto_btn forward" id="casa_burro_cabras_forward">></button>
-                                </div>
-                            </div>
-
-                            <div class="info_text">
-                                <div>
-                                    <p></p>
-                                </div>
-
-                                <p class="no_space">2020</p>
-                                <p class="no_space"><small>Arrezima</small></p>
-                                <p class="no_space"><small>Hugo Lopes</small></p>
-                            </div>
-                            <p>&nbsp;</p>
-                        </div>
-                    </section>
-                    <!-- /CASA PARA UM BURRO E DUAS CABRAS -->
-
-                    <!-- O CALQUE DAS FOLHAS -->
-                    <section id="calque_folhas_section" class="projetos_section">
-                        <p id="calque_folhas_menu" class="lista no_space projetos" onclick="projects_click('calque_folhas')"> 
-                            <span>O Calque das Folhas</span> <small>Oficina</small>
-                        </p>
-                        <div class="hidden projeto_sobre" id="calque_folhas_div">
-                            <!--IMAGENS-->
-                            <div class="row">
-                                <div class="col-3" style="margin: auto; text-align: right;">
-                                    <button class="projeto_btn back" id="calque_folhas_back"><</button>
-                                </div>
-                                <div class="col-6" style="text-align: center;">
-                                    <img class="projeto_img" id="calque_folhas_img" src="images/projects/calque_folhas/calque_folhas_1.JPG" alt="">
-                                </div>
-                                <div class="col-3" style="margin: auto; text-align: left;">
-                                    <button class="projeto_btn forward" id="calque_folhas_forward">></button>
-                                </div>
-                            </div>
-
-                            <div class="info_text">
-                                <div>
-                                    <p>Produção de sacos com tingimento natural.</p>
-                                </div>
-
-                                <p class="no_space">2020</p>
-                                <p class="no_space"><small>Arrezima</small></p>
-                                <p class="no_space"><small>Ana Doe, Daniela Doe, Margarida Pereira, Valdemar Lopes</small></p>
-                            </div>
-                            <p>&nbsp;</p>
-                        </div>
-                    </section>
-                    <!-- /O CALQUE DAS FOLHAS -->
-
-                    <!-- SUPORTE-PORTÁTIL -->
-                    <section id="suporte_portatil_section" class="projetos_section">
-                        <p id="suporte_portatil_menu" class="lista no_space projetos" onclick="projects_click('suporte_portatil')">                     
-                            <span>Suporte-Portátil</span> <small>Design</small>
-                        </p>
-                        <div class="hidden projeto_sobre" id="suporte_portatil_div">
-                            <!--IMAGENS-->
-                            <div class="row">
-                                <div class="col-3" style="margin: auto; text-align: right;">
-                                    <button class="projeto_btn back" id="suporte_portatil_back"><</button>
-                                </div>
-                                <div class="col-6" style="text-align: center;">
-                                    <img class="projeto_img" id="suporte_portatil_img" src="images/projects/suporte_portatil/suporte_portatil_1.jpg" alt="">
-                                </div>
-                                <div class="col-3" style="margin: auto; text-align: left;">
-                                    <button class="projeto_btn forward" id="suporte_portatil_forward">></button>
-                                </div>
-                            </div>
-
-                            <div class="info_text">
-                                <div>
-                                    <p>Molde de três peças em mdf 18mm.</p>
-                                </div>
-
-                                <p class="no_space">2020</p>
-                                <p class="no_space"><small>Arrezima</small></p>
-                                <p class="no_space"><small>Hugo Lopes</small></p>
-                            </div>
-                            <p>&nbsp;</p>
-                        </div>
-                    </section>
-                    <!-- /SUPORTE-PORTÁTIL -->
-
-                    <!-- UMA ESCULTURA PARA PÔR OVOS -->
-                    <section id="ovos_section" class="projetos_section">
-                        <p id="ovos_menu" class="lista no_space projetos" onclick="projects_click('ovos')"> 
-                            <span>Uma Escultura Para Pôr Ovos</span> <small>Arquitetura</small>
-                        </p>
-                        <div class="hidden projeto_sobre" id="ovos_div">
-                            <!--IMAGENS-->
-                            <div class="row">
-                                <div class="col-3" style="margin: auto; text-align: right;">
-                                    <button class="projeto_btn back" id="ovos_back"><</button>
-                                </div>
-                                <div class="col-6" style="text-align: center;">
-                                    <img class="projeto_img" id="ovos_img" src="images/projects/ovos/ovos_0.jpg" alt="">
-                                </div>
-                                <div class="col-3" style="margin: auto; text-align: left;">
-                                    <button class="projeto_btn forward" id="ovos_forward">></button>
-                                </div>
-                            </div>
-
-                            <div class="info_text">
-                                <div>
-                                    <p>Até à construção da Casa do Burro e dos Três Cabras, foi projectada uma estrutura temporária para as galinhas, com o intuito de testar as canas bravas como material adequado para a construção de divisórias e fachadas.</p>
-                                    <p>A Escultura para Pôr Ovos é um galinheiro modular, construído com materiais simples: ripas de pinho para a estrutura, madeira recuperada, canas para as zonas fechadas e poleiros e chapa de metal corrugado. O interior é ventilado e permite que a luz natural do dia seja filtrada. A abertura traseira permite a recolha dos ovos.</p>
-                                </div>
-
-                                <p class="no_space">2020</p>
-                                <p class="no_space"><small>Arrezima</small></p>
-                                <p class="no_space"><small>Hugo Lopes, Valdemar Lopes</small></p>
-                            </div>
-                            <p>&nbsp;</p>
-                        </div>
-                    </section>
-                    <!-- /UMA ESCULTURA PARA PÔR OVOS -->
-
-                    <!-- UMA PLATAFORMA ENTRE DOIS EUCALIPTOS -->
-                    <section id="plataforma_section" class="projetos_section">
-                        <p id="plataforma_menu" class="lista no_space projetos" onclick="projects_click('plataforma')"> 
-                            <span>Uma Plataforma entre Dois Eucaliptos</span> <small>Oficina</small>
-                        </p>
-                        <div class="hidden projeto_sobre" id="plataforma_div">
-                            <!--IMAGENS-->
-                            <div class="row">
-                                <div class="col-3" style="margin: auto; text-align: right;">
-                                    <button class="projeto_btn back" id="plataforma_back"><</button>
-                                </div>
-                                <div class="col-6" style="text-align: center;">
-                                    <img class="projeto_img" id="plataforma_img" src="images/projects/plataforma/plataforma_1.jpg" alt="">
-                                </div>
-                                <div class="col-3" style="margin: auto; text-align: left;">
-                                    <button class="projeto_btn forward" id="plataforma_forward">></button>
-                                </div>
-                            </div>
-
-                            <div class="info_text">
-                                <div>
-                                    <p></p>
-                                </div>
-
-                                <p class="no_space">2020</p>
-                                <p class="no_space"><small>Arrezima</small></p>
-                                <p class="no_space"><small>Hugo Lopes, Lara Lopes, Valdemar Lopes</small></p>
-                            </div>
-                            <p>&nbsp;</p>
-                        </div>
-                    </section>
-                    <!-- /UMA PLATAFORMA ENTRE DOIS EUCALIPTOS -->
-
-                    <!-- FERRO NOVO -->
-                    <section id="ferro_novo_section" class="projetos_section">
-                        <p id="ferro_novo_menu" class="lista no_space projetos" onclick="projects_click('ferro_novo')"> 
-                            <span>Ferro Novo</span> <small>Oficina</small>
-                        </p>
-                        <div class="hidden projeto_sobre" id="ferro_novo_div">
-                            <!--IMAGENS-->
-                            <div class="row">
-                                <div class="col-3" style="margin: auto; text-align: right;">
-                                    <button class="projeto_btn back" id="ferro_novo_back"><</button>
-                                </div>
-                                <div class="col-6" style="text-align: center;">
-                                    <img class="projeto_img" id="ferro_novo_img" src="images/projects/ferro_novo/ferro_novo_1.jpg" alt="">
-                                </div>
-                                <div class="col-3" style="margin: auto; text-align: left;">
-                                    <button class="projeto_btn forward" id="ferro_novo_forward">></button>
-                                </div>
-                            </div>
-
-                            <div class="info_text">
-                                <div>
-                                    <p></p>
-                                </div>
-
-                                <p class="no_space">2020</p>
-                                <p class="no_space"><small>Arrezima</small></p>
-                                <p class="no_space"><small>António Silveira, Hugo Lopes, Valdemar Lopes</small></p>
-                            </div>
-                            <p>&nbsp;</p>
-                        </div>
-                    </section>
-                    <!-- /FERRO NOVO -->
-
-                    <!-- AH LIXO, LIXO -->
-                    <section id="lixo_lixo_section" class="projetos_section">
-                        <p id="lixo_lixo_menu" class="lista no_space projetos" onclick="projects_click('lixo_lixo')"> 
-                            <span>Ah lixo, lixo</span> <small>Design</small>
-                        </p>
-                        <div class="hidden projeto_sobre" id="lixo_lixo_div">
-                            <!--IMAGENS-->
-                            <div class="row">
-                                <div class="col-3" style="margin: auto; text-align: right;">
-                                    <button class="projeto_btn back" id="lixo_lixo_back"><</button>
-                                </div>
-                                <div class="col-6" style="text-align: center;">
-                                    <img class="projeto_img" id="lixo_lixo_img" src="images/projects/lixo_lixo/lixo_lixo_1.jpg" alt="">
-                                </div>
-                                <div class="col-3" style="margin: auto; text-align: left;">
-                                    <button class="projeto_btn forward" id="lixo_lixo_forward">></button>
-                                </div>
-                            </div>
-
-                            <div class="info_text">
-                                <div>
-                                    <p></p>
-                                </div>
-
-                                <p class="no_space">2020</p>
-                                <p class="no_space"><small>Arrezima</small></p>
-                                <p class="no_space"><small>Hugo Lopes, Valdemar Lopes</small></p>
-                            </div>
-                            <p>&nbsp;</p>
-                        </div>
-                    </section>
-                    <!-- /AH LIXO, LIXO -->
+                    </div>
 
                 </div>
                 <!-- PROJETOS -->                
