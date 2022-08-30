@@ -9,6 +9,11 @@ var categories = {
 }
 
 function filter_projects(category) {
+
+    if (!$("#projetos_menu").hasClass('active')) {
+        menu_click("projetos");
+    }
+
     $(".projetos_submenu").each(function() {
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
@@ -40,7 +45,10 @@ function filter_projects(category) {
 }
 
 var project_images = {
-    "boussana": [],
+    "boussana": [
+        "images/projects/boussana/boussana_1.jpg",
+        "images/projects/boussana/boussana_2.jpg"
+    ],
     "calque_folhas": [
         "images/projects/calque_folhas/calque_folhas_1.JPG", 
         "images/projects/calque_folhas/calque_folhas_2.JPG", 
@@ -98,6 +106,9 @@ var project_images = {
         "images/projects/suporte_portatil/suporte_portatil_1.jpg",
         "images/projects/suporte_portatil/suporte_portatil_2.jpg",
         "images/projects/suporte_portatil/suporte_portatil_3.jpg",
+    ],
+    "sol_adormecido": [
+        "images/projects/sol_adormecido/sol_adormecido_1.jpg",
     ]
 };
 
@@ -113,7 +124,8 @@ var projects_images_hover = {
     "ovos": "images/projects/ovos/ovos_hover.jpg",
     "plataforma": "images/projects/plataforma/plataforma_hover.jpg",
     "respiga": "images/projects/respiga/respiga_hover.jpg", 
-    "suporte_portatil": "images/projects/suporte_portatil/suporte_portatil_hover.jpg"
+    "suporte_portatil": "images/projects/suporte_portatil/suporte_portatil_hover.jpg",
+    "sol_adormecido": "images/projects/sol_adormecido/sol_adormecido_hover.jpg"
 };
 
 $(".projeto_btn.back").click(function(event) {
@@ -155,12 +167,18 @@ $(".projeto_btn.forward").click(function(event) {
 });
 
 function projects_hover(project) {
+    /*
     var img_holder = $("#projects_hover");
     img_holder.attr("src", projects_images_hover[project]);
     img_holder.removeClass("hidden");
+    */
+    $(".projects_img_holder").css("background-image", "url('"+projects_images_hover[project]+"')");
 }
 
 function projects_unhover() {
+    /*
     var img_holder = $("#projects_hover");
     img_holder.addClass("hidden");
+    */
+    $(".projects_img_holder").css("background-image", "url('')");
 }

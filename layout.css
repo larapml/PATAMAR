@@ -59,7 +59,7 @@ li.menu span:hover {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .submenu {
@@ -123,6 +123,18 @@ li.menu span:hover {
     font-size: 10px;
 }
 
+.projects_img_holder {
+    background-image: url('');
+    /* background-attachment: fixed; */
+    background-position: top right;
+    background-origin: content-box;
+    padding-right: 5px;
+    background-repeat: no-repeat;
+    background-size: 20%, 100%;
+    width: 100%;
+    margin-right: 0px;
+}
+
 .projeto_img {
     width: 80%;
     margin-top: 40px;   
@@ -172,6 +184,8 @@ li.menu span:hover {
     text-decoration: underline;
 }
 
+/*
 .colaboradores:hover {
     text-decoration: underline;
 }
+*/

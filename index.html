@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<link rel="icon" href="imagens/favicon.ico">
+<link rel="icon" href="images/favicon.ico">
 
 </head>
 <body>
@@ -39,7 +39,7 @@
                             <div class="hidden submenu" id="sobre_submenu"></div>
                         </li>
                         <li id="servicos_menu" class="menu">
-                            <p><span onclick="menu_click('servicos');submenu_click('colaboracao', 'servicos')">SERVIÇOS</span><span style="text-decoration: none; padding-left: 10px;" onclick="toogle_submenu('servicos')"><i class="fa fa-angle-down" id="servicos_angle"></i></span></p>
+                            <p><span onclick="toogle_submenu('servicos');">SERVIÇOS</span><span style="text-decoration: none; padding-left: 10px;" onclick="toogle_submenu('servicos')"><i class="fa fa-angle-down" id="servicos_angle"></i></span></p>
                             <div class="hidden submenu" id="servicos_submenu">
                                 <p id="colaboracao" class="servicos_submenu submenu" style="margin-top: 10px;" onclick="submenu_click('colaboracao', 'servicos')"><small>Colaboração</small></p>
                                 <p id="laboratorio" class="servicos_submenu submenu" style="margin-top: 10px;" onclick="submenu_click('laboratorio', 'servicos')"><small>Laboratório Arrezima</small></p>
@@ -47,9 +47,9 @@
                             </div>
                         </li>
                         <li id="projetos_menu" class="menu">
-                            <p><span onclick="menu_click('projetos')">PROJETOS</span><span style="text-decoration: none; padding-left: 10px;" onclick="toogle_submenu('projetos')"><i class="fa fa-angle-down" id="projetos_angle"></i></span></p>
+                            <p><span onclick="toogle_submenu('projetos')">PROJETOS</span><span style="text-decoration: none; padding-left: 10px;" onclick="toogle_submenu('projetos')"><i class="fa fa-angle-down" id="projetos_angle"></i></span></p>
                             <div class="hidden submenu" id="projetos_submenu">
-                                <p id="todos" class="no_space projetos_submenu active" onclick="filter_projects('todos')"><small>Todos</small></p>
+                                <p id="todos" class="no_space projetos_submenu" onclick="filter_projects('todos')"><small>Todos</small></p>
                                 <p id="em_contrucao" class="no_space projetos_submenu" style="margin-top: 10px;" onclick="filter_projects('em_contrucao')"><small>Em Construção</small></p>
                                 <p id="arquitetura" class="no_space projetos_submenu" style="margin-top: 10px;" onclick="filter_projects('arquitetura')"><small>Arquitetura</small></p>
                                 <p id="instalacao" class="no_space projetos_submenu" style="margin-top: 10px;" onclick="filter_projects('instalacao')"><small>Instalação</small></p>
@@ -101,8 +101,8 @@
                 <!-- SERVIÇOS -->
                 <!-- COLABORAÇÃO -->
                 <div class="full_page main hidden" id="colaboracao_div">
-                    <p class="underlined" style="font-size: 20px;"><b>+ Projeto</b></p>
-                    <p>Estamos disponíveis para trabalhar e colaborar em projetos na área de arquitetura, design participativo, instalações, objetos de cenografia, design de produto, etc</p>
+                    <p class="underlined" style="font-size: 20px;"><b>+ Colaboração</b></p>
+                    <p>Estamos disponíveis para trabalhar e colaborar em projetos na área de arquitetura, design participativo, instalações, objetos de cenografia e design de produto.</p>
                 </div>
                 <!-- /COLABORAÇÃO -->
 
@@ -125,18 +125,18 @@
                     <div class="row" id="store" style="text-align: center; margin-bottom: 20px;">
                         
                     </div>
-                    <div style="margin-top: 30px;">
-                        <p style="text-align: center; margin-left: 0px; margin-right: 30%;"><small><b>Para mais informações contactar <span class="text-underlined">geral@umpatamar.com</span></b></small></p>
+                    <div style="margin-top: 40px;">
+                        <p style="text-align: left; margin-left: 5%; margin-right: 5%;"><small>Para mais informações sobre este inventário de produtos contacta-nos através de <span style="text-decoration: underline;"><a href="mailto:geral@umpatamar.com" style="margin-left: 0%;"><small>geral@umpatamar.com</small></a></span></small></p>
                     </div>
                 </div>
                 <!-- /PRODUÇÃO -->
                 <!-- /SERVIÇOS -->
 
                 <!-- PROJETOS -->
-                <div class="full_page hidden main" id="projetos_div">
+                <div class="full_page hidden main" id="projetos_div" style="display: flex;">
 
-                    <div class="row">
-                        <div class="col-12 col-sm-8">                        
+                    <div class="row projects_img_holder">
+                        <div class="col-12 col-sm-12">                        
                             <!-- CORPOS NA ALAMEDA -->
                             <section id="corpos_alameda_section" class="projetos_section">
                                 <p id="corpos_alameda_menu" class="lista no_space projetos" onclick="projects_click('corpos_alameda')" onmouseover="projects_hover('corpos_alameda')" onmouseout="projects_unhover()"> 
@@ -211,13 +211,13 @@
                                 <div class="hidden projeto_sobre" id="boussana_div">
                                     <div class="row">
                                         <div class="col-3" style="margin: auto; text-align: right;">
-                                            <button class="projeto_btn" id="boussana_back"><i class="fa-solid fa-angle-left"></i></button>
+                                            <button class="projeto_btn back" id="boussana_back"><</button>
                                         </div>
                                         <div class="col-6" style="text-align: center;">
-                                            <img class="projeto_img" id="boussana_img" src="images/projects/boussana/boussana_1.png" alt="">
+                                            <img class="projeto_img" id="boussana_img" src="images/projects/boussana/boussana_1.jpg" alt="">
                                         </div>
                                         <div class="col-3" style="margin: auto; text-align: left;">
-                                            <button class="projeto_btn" id="boussana_forward"><i class="fa-solid fa-angle-right"></i></button>
+                                            <button class="projeto_btn forward" id="boussana_forward">></button>
                                         </div>
                                     </div>
 
@@ -301,7 +301,7 @@
 
                                         <p class="no_space">2020</p>
                                         <p class="no_space"><small>Arrezima</small></p>
-                                        <p class="no_space"><small>David Monteiro, Eduardo Pereira, Helena Pereira, Hugo Lopes, João Gama, Valdemar Lopes</small></p>
+                                        <p class="no_space"><small>David Moreira, Eduardo Pereira, Helena Pereira, Hugo Lopes, João Gama, Valdemar Lopes</small></p>
                                     </div>
                                     <p>&nbsp;</p>
                                 </div>
@@ -573,9 +573,11 @@
                             </section>
                             <!-- /AH LIXO, LIXO -->
                         </div>
+                        <!--
                         <div class="col-0 col-sm-4">
                             <img id="projects_hover" class="projects_hover hidden" src="" alt="">
                         </div>
+                        -->
                     </div>
 
                 </div>
