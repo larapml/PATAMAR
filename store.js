@@ -10,7 +10,7 @@ var store = {
         "description": ["Suporte desmontável de 3 peças de mdf 18mm. Ajustável a qualquer modelo de computador portátil."],
     },
     "sacos": {
-        "image": "images/inventory/banco.jpg",
+        "image": "images/inventory/saco.jpg",
         "title": "Sacos de folhas",
         "description": ["Sacos em eco print. 3 versões - folhas, ferros enferrujados e eucalipto. Vários formatos."],
     },
@@ -24,6 +24,11 @@ var store = {
         "title": "Banco X",
         "description": ["Banco inspirado na Mutchinha de Cabo Verde e no tronco da D. Geninha. Disponível em vários tamanhos."],
     },
+    "d_sebastiao": {
+        "image": "images/inventory/d_sebastiao.jpeg",
+        "title": "D. Sebastião",
+        "description": ["Tronco com espada suportado por pernas de verguinha."],
+    }
 };
 
 function store_init() {
