@@ -123,6 +123,22 @@ li.menu span:hover {
     font-size: 10px;
 }
 
+#colaboracao_div {
+    text-align: center;
+}
+
+#colaboracao_div > p {
+    text-align: left;
+}
+
+#laboratorio_div {
+    text-align: center;
+}
+
+#laboratorio_div > p {
+    text-align: left;
+}
+
 .projects_img_holder {
     background-image: url('');
     /* background-attachment: fixed; */

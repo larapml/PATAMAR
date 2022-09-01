@@ -1,11 +1,10 @@
 var categories = {
     "em_contrucao": ["grade_viva"],
-    "urbanismo": ["grade_viva", "respiga"],
     "concurso": ["boussana", "sol_adormecido"],
     "arquitetura": ["boussana", "casa_burro_cabras", "ovos"],
     "instalacao": ["sol_adormecido"],
     "design": ["chaleira_compostagem", "suporte_portatil", "lixo_lixo"],
-    "oficina": ["calque_folhas", "plataforma", "ferro_novo", "corpos_alameda"]
+    "oficina": ["calque_folhas", "plataforma", "ferro_novo", "corpos_alameda", "grade_viva", "respiga"]
 }
 
 function filter_projects(category) {
@@ -143,7 +142,7 @@ $(".projeto_btn.back").click(function(event) {
             next_index = project_images[project].length - 1;
         }
 
-        console.log(project_images[project][next_index])
+        $("#"+project+"_counter").text(next_index+1+"/"+project_images[project].length);
         img_holder.attr("src", project_images[project][next_index]);
     }
 });
@@ -162,23 +161,52 @@ $(".projeto_btn.forward").click(function(event) {
             next_index = 0;
         }
 
+        $("#"+project+"_counter").text(next_index+1+"/"+project_images[project].length);
         img_holder.attr("src", project_images[project][next_index]);
     }
 });
 
+var project_active = false;
+
 function projects_hover(project) {
-    /*
-    var img_holder = $("#projects_hover");
-    img_holder.attr("src", projects_images_hover[project]);
-    img_holder.removeClass("hidden");
-    */
+    if (project_active)
+        return;
+
     $(".projects_img_holder").css("background-image", "url('"+projects_images_hover[project]+"')");
 }
 
 function projects_unhover() {
-    /*
-    var img_holder = $("#projects_hover");
-    img_holder.addClass("hidden");
-    */
     $(".projects_img_holder").css("background-image", "url('')");
+}
+
+function projects_click(project) {
+    if ($("#"+project+"_menu").hasClass('active')) {
+
+        $("#"+project+"_div").addClass('hidden');
+        $("#"+project+"_menu").removeClass('active');
+        project_active = false;
+        return;
+
+    }
+
+    $(".projetos").each(function() {
+        $(this).removeClass('active');
+    });
+
+    $("#"+project+"_menu").addClass('active');
+
+    $(".projeto_sobre").each(function() {
+        if (!$(this).hasClass('hidden')) {
+            $(this).addClass('hidden');
+        }
+    });
+
+    $("#"+project+"_div").removeClass('hidden');
+    project_active = true;
+}
+
+function projects_init() {
+    Object.keys(project_images).forEach(function(project) {
+        $("#"+project+"_counter").text("1/"+project_images[project].length);
+    });
 }

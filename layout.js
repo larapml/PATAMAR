@@ -5,6 +5,7 @@ var sticky = navbar.offsetTop;
 
 $(document).ready(function() {
     // Initialize the store
+    projects_init();
     store_init();
 });
 
@@ -71,6 +72,10 @@ function submenu_click(subsection, section) {
         $(this).removeClass('active');
     });
 
+    $(".submenu").each(function() {
+        $(this).removeClass('active');
+    });
+
     $("#"+section+"_menu").addClass('active');
     $("#"+subsection).addClass('active');
 
@@ -102,30 +107,6 @@ function toogle_submenu(section) {
         $("#"+section+"_angle").removeClass('fa-angle-up');
         $("#"+section+"_angle").addClass('fa-angle-down');
     }
-}
-
-function projects_click(project) {
-    if ($("#"+project+"_menu").hasClass('active')) {
-
-        $("#"+project+"_div").addClass('hidden');
-        $("#"+project+"_menu").removeClass('active');
-        return;
-
-    }
-
-    $(".projetos").each(function() {
-        $(this).removeClass('active');
-    });
-
-    $("#"+project+"_menu").addClass('active');
-
-    $(".projeto_sobre").each(function() {
-        if (!$(this).hasClass('hidden')) {
-            $(this).addClass('hidden');
-        }
-    });
-
-    $("#"+project+"_div").removeClass('hidden');
 }
 
 function show_about(person) {

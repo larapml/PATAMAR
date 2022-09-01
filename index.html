@@ -49,15 +49,13 @@
                         <li id="projetos_menu" class="menu">
                             <p><span onclick="toogle_submenu('projetos')">PROJETOS</span><span style="text-decoration: none; padding-left: 10px;" onclick="toogle_submenu('projetos')"><i class="fa fa-angle-down" id="projetos_angle"></i></span></p>
                             <div class="hidden submenu" id="projetos_submenu">
-                                <p id="todos" class="no_space projetos_submenu" onclick="filter_projects('todos')"><small>Todos</small></p>
-                                <p id="em_contrucao" class="no_space projetos_submenu" style="margin-top: 10px;" onclick="filter_projects('em_contrucao')"><small>Em Construção</small></p>
-                                <p id="arquitetura" class="no_space projetos_submenu" style="margin-top: 10px;" onclick="filter_projects('arquitetura')"><small>Arquitetura</small></p>
-                                <p id="instalacao" class="no_space projetos_submenu" style="margin-top: 10px;" onclick="filter_projects('instalacao')"><small>Instalação</small></p>
-                                <p id="urbanismo" class="no_space projetos_submenu" style="margin-top: 10px;" onclick="filter_projects('urbanismo')"><small>Urbanismo</small></p>
-                                <p id="design" class="no_space projetos_submenu" style="margin-top: 10px;" onclick="filter_projects('design')"><small>Design</small></p>
-                                <p id="oficina" class="no_space projetos_submenu" style="margin-top: 10px;" onclick="filter_projects('oficina')"><small>Oficina</small></p>
-                                <p id="publicacao" class="no_space projetos_submenu" style="margin-top: 10px;" onclick="filter_projects('publicacao')"><small>Publicação</small></p>
-                                <p id="concurso" class="projetos_submenu" style="margin-top: 10px;" onclick="filter_projects('concurso')"><small>Concurso</small></p>
+                                <p id="todos" class="no_space projetos_submenu submenu" onclick="filter_projects('todos')"><small>Todos</small></p>
+                                <p id="em_contrucao" class="no_space projetos_submenu submenu" style="margin-top: 10px;" onclick="filter_projects('em_contrucao')"><small>Em Construção</small></p>
+                                <p id="arquitetura" class="no_space projetos_submenu submenu" style="margin-top: 10px;" onclick="filter_projects('arquitetura')"><small>Arquitetura</small></p>
+                                <p id="instalacao" class="no_space projetos_submenu submenu" style="margin-top: 10px;" onclick="filter_projects('instalacao')"><small>Instalação</small></p>
+                                <p id="design" class="no_space projetos_submenu submenu" style="margin-top: 10px;" onclick="filter_projects('design')"><small>Design</small></p>
+                                <p id="oficina" class="no_space projetos_submenu submenu" style="margin-top: 10px;" onclick="filter_projects('oficina')"><small>Oficina</small></p>
+                                <p id="concurso" class="projetos_submenu submenu" style="margin-top: 10px;" onclick="filter_projects('concurso')"><small>Concurso</small></p>
                             </div>
                         </li>
                         <li id="colaboradores_menu" class="menu">
@@ -103,6 +101,7 @@
                 <div class="full_page main hidden" id="colaboracao_div">
                     <p class="underlined" style="font-size: 20px;"><b>+ Colaboração</b></p>
                     <p>Estamos disponíveis para trabalhar e colaborar em projetos na área de arquitetura, design participativo, instalações, objetos de cenografia e design de produto.</p>
+                    <img src="images/Colaboração_website.jpg" alt="" style="width: 40%;">
                 </div>
                 <!-- /COLABORAÇÃO -->
 
@@ -111,12 +110,17 @@
                     <p class="underlined" style="font-size: 20px;"><b>+ Laboratório Arrezima</b></p>
                     <p>A Arrezima é um lugar em construção e por isso requer da presença de pessoas para que a sua existência no tempo seja materializada. Entre giestais e eucaliptais, “e vida e encostas que se transformavam em matas de carvalhos e sobreiros”, este é um lugar pseudo-autóctone. ‘Autóctone’ porque por fatores naturais foi plantado na encosta por pessoas oriundas de outros lugares (e por isso existe de e com outros lugares); ‘pseudo’ porque continua a questionar a sua condição de lugar.</p>
                     <p>A Arrezima oferece condições de vida silenciosa e resiliente para residências individuais ou coletivas e espaço de trabalho para desenvolvimento de projetos práticos e/ou de pesquisa.</p>
+                    
                     <p>Espaços disponíveis:</p>
                     <p style="padding-bottom: 0px; margin-bottom: 0px;">&emsp; - Oficina e espaço para materializar ideias</p>
                     <p style="padding-bottom: 0px; margin-bottom: 0px;">&emsp; - Horta para plantar</p>
                     <p style="padding-bottom: 0px; margin-bottom: 0px;">&emsp; - Biblioteca para ler e investigar</p>
                     <p style="padding-bottom: 0px; margin-bottom: 0px;">&emsp; - Cozinha para cozinhar</p>
                     <p style="padding-bottom: 0px; margin-bottom: 0px;">&emsp; - Camas para descansar</p>
+
+                    <p>&nbsp;</p>
+                    <img src="images/Laboratório Arrezima_website.jpg" alt="" style="width: 50%;">
+                    <p>&nbsp;</p>
                 </div>
                 <!-- /LABORATÓRIO -->
                 
@@ -154,6 +158,9 @@
                                         <div class="col-3" style="margin: auto; text-align: left;">
                                             <button class="projeto_btn forward" id="corpos_alameda_forward">></button>
                                         </div>
+                                        <div class="col-12">
+                                            <p class="text-center" style="margin-top: 10px;" id="corpos_alameda_counter"></p>
+                                        </div>
                                     </div>
 
                                     <div class="info_text">
@@ -173,7 +180,7 @@
                             <!-- GRADE VIVA -->
                             <section id="grade_viva_section" class="projetos_section">
                                 <p id="grade_viva_menu" class="lista no_space projetos" onclick="projects_click('grade_viva')" onmouseover="projects_hover('grade_viva')" onmouseout="projects_unhover()"> 
-                                    <span>Grade Viva</span> <small>Em Construção, Urbanismo</small>
+                                    <span>Grade Viva</span> <small>Em Construção, Oficina</small>
                                 </p>
                                 <div class="hidden projeto_sobre" id="grade_viva_div">
                                     <!--IMAGENS-->
@@ -186,6 +193,9 @@
                                         </div>
                                         <div class="col-3" style="margin: auto; text-align: left;">
                                             <button class="projeto_btn forward" id="grade_viva_forward">></button>
+                                        </div>
+                                        <div class="col-12">
+                                            <p class="text-center" style="margin-top: 10px;" id="grade_viva_counter"></p>
                                         </div>
                                     </div>
 
@@ -218,6 +228,9 @@
                                         </div>
                                         <div class="col-3" style="margin: auto; text-align: left;">
                                             <button class="projeto_btn forward" id="boussana_forward">></button>
+                                        </div>
+                                        <div class="col-12">
+                                            <p class="text-center" style="margin-top: 10px;" id="boussana_counter"></p>
                                         </div>
                                     </div>
 
@@ -255,6 +268,9 @@
                                         <div class="col-3" style="margin: auto; text-align: left;">
                                             <button class="projeto_btn forward" id="sol_adormecido_forward">></button>
                                         </div>
+                                        <div class="col-12">
+                                            <p class="text-center" style="margin-top: 10px;" id="sol_adormecido_counter"></p>
+                                        </div>
                                     </div>
 
                                     <div class="info_text">
@@ -278,7 +294,7 @@
                             <!-- A RESPIGA DAS PEDRAS -->
                             <section id="respiga_section" class="projetos_section">
                                 <p id="respiga_menu" class="lista no_space projetos" onclick="projects_click('respiga')" onmouseover="projects_hover('respiga')" onmouseout="projects_unhover()">
-                                    <span>A Respiga das Pedras</span> <small>Urbanismo</small>
+                                    <span>A Respiga das Pedras</span> <small>Oficina</small>
                                 </p>
                                 <div class="hidden projeto_sobre" id="respiga_div">
                                     <!--IMAGENS-->
@@ -291,6 +307,9 @@
                                         </div>
                                         <div class="col-3" style="margin: auto; text-align: left;">
                                             <button class="projeto_btn forward" id="respiga_forward">></button>
+                                        </div>
+                                        <div class="col-12">
+                                            <p class="text-center" style="margin-top: 10px;" id="respiga_counter"></p>
                                         </div>
                                     </div>
 
@@ -325,6 +344,9 @@
                                         <div class="col-3" style="margin: auto; text-align: left;">
                                             <button class="projeto_btn forward" id="chaleira_compostagem_forward">></button>
                                         </div>
+                                        <div class="col-12">
+                                            <p class="text-center" style="margin-top: 10px;" id="chaleira_compostagem_counter"></p>
+                                        </div>
                                     </div>
 
                                     <div class="info_text">
@@ -357,6 +379,9 @@
                                         </div>
                                         <div class="col-3" style="margin: auto; text-align: left;">
                                             <button class="projeto_btn forward" id="casa_burro_cabras_forward">></button>
+                                        </div>
+                                        <div class="col-12">
+                                            <p class="text-center" style="margin-top: 10px;" id="casa_burro_cabras_counter"></p>
                                         </div>
                                     </div>
 
@@ -391,6 +416,9 @@
                                         <div class="col-3" style="margin: auto; text-align: left;">
                                             <button class="projeto_btn forward" id="calque_folhas_forward">></button>
                                         </div>
+                                        <div class="col-12">
+                                            <p class="text-center" style="margin-top: 10px;" id="calque_folhas_counter"></p>
+                                        </div>
                                     </div>
 
                                     <div class="info_text">
@@ -424,6 +452,9 @@
                                         <div class="col-3" style="margin: auto; text-align: left;">
                                             <button class="projeto_btn forward" id="suporte_portatil_forward">></button>
                                         </div>
+                                        <div class="col-12">
+                                            <p class="text-center" style="margin-top: 10px;" id="suporte_portatil_counter"></p>
+                                        </div>
                                     </div>
 
                                     <div class="info_text">
@@ -456,6 +487,9 @@
                                         </div>
                                         <div class="col-3" style="margin: auto; text-align: left;">
                                             <button class="projeto_btn forward" id="ovos_forward">></button>
+                                        </div>
+                                        <div class="col-12">
+                                            <p class="text-center" style="margin-top: 10px;" id="ovos_counter"></p>
                                         </div>
                                     </div>
 
@@ -491,6 +525,9 @@
                                         <div class="col-3" style="margin: auto; text-align: left;">
                                             <button class="projeto_btn forward" id="plataforma_forward">></button>
                                         </div>
+                                        <div class="col-12">
+                                            <p class="text-center" style="margin-top: 10px;" id="plataforma_counter"></p>
+                                        </div>
                                     </div>
 
                                     <div class="info_text">
@@ -524,6 +561,9 @@
                                         <div class="col-3" style="margin: auto; text-align: left;">
                                             <button class="projeto_btn forward" id="ferro_novo_forward">></button>
                                         </div>
+                                        <div class="col-12">
+                                            <p class="text-center" style="margin-top: 10px;" id="ferro_novo_counter"></p>
+                                        </div>
                                     </div>
 
                                     <div class="info_text">
@@ -556,6 +596,9 @@
                                         </div>
                                         <div class="col-3" style="margin: auto; text-align: left;">
                                             <button class="projeto_btn forward" id="lixo_lixo_forward">></button>
+                                        </div>
+                                        <div class="col-12">
+                                            <p class="text-center" style="margin-top: 10px;" id="lixo_lixo_counter"></p>
                                         </div>
                                     </div>
 
